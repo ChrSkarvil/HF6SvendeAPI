@@ -30,3 +30,4 @@ C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\refint\HF6
 C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\HF6SvendeAPI.pdb
 C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\HF6SvendeAPI.genruntimeconfig.cache
 C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\ref\HF6SvendeAPI.dll
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\HF6SvendeAPI.sourcelink.json
