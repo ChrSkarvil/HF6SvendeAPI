@@ -1,0 +1,6 @@
+@HF6SvendeAPI_HostAddress = http://localhost:5148
+
+GET {{HF6SvendeAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
