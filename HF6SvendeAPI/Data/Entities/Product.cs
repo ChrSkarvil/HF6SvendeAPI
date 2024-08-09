@@ -11,6 +11,7 @@ namespace HF6SvendeAPI.Data.Entities
             OrderItems = new HashSet<OrderItem>();
             ProductColors = new HashSet<ProductColor>();
             ProductImages = new HashSet<ProductImage>();
+            Listings = new HashSet<Listing>();
         }
 
         [Key]
@@ -22,8 +23,6 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [StringLength(45)]
         public string Brand { get; set; } = null!;
-        [Required]
-        public decimal Price { get; set; }
         [Required]
         [StringLength(200)]
         public string Description { get; set; } = null!;
@@ -43,6 +42,8 @@ namespace HF6SvendeAPI.Data.Entities
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         public virtual ICollection<ProductColor> ProductColors { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
+        public virtual ICollection<Listing> Listings { get; set; }
+
 
     }
 }

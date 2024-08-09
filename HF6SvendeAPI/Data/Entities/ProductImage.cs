@@ -12,6 +12,8 @@ namespace HF6SvendeAPI.Data.Entities
         public int ProductId { get; set; }
         [ForeignKey(nameof(Image))]
         public int ImageId { get; set; }
+        [Required]
+        public bool IsVerified { get; set; }
 
         public virtual Image Image { get; set; } = null!;
         public virtual Product Product { get; set; } = null!;

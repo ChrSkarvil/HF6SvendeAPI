@@ -4,6 +4,11 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace HF6SvendeAPI.Data.Entities
 {
+    public enum UserType
+    {
+        Customer = 1,
+        Employee = 2,
+    }
     public class Login
     {
         [Key]
@@ -16,11 +21,13 @@ namespace HF6SvendeAPI.Data.Entities
         [StringLength(100)]
         public string Password { get; set; } = null!;
         [Required]
-        public ulong UserType { get; set; }
+        public UserType UserType { get; set; }
         [ForeignKey(nameof(Customer))]
         public int? CustomerId { get; set; }
         [ForeignKey(nameof(Employee))]
         public int? EmployeeId { get; set; }
+        [Required]
+        public bool IsActive { get; set; }
 
         public virtual Customer? Customer { get; set; }
         public virtual Employee? Employee { get; set; }

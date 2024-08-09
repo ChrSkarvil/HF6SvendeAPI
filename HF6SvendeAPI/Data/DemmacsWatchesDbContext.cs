@@ -124,9 +124,6 @@ namespace HF6SvendeAPI.Data
                 entity.Property(e => e.CreateDate)
                     .HasDefaultValueSql("GETDATE()");
 
-                entity.Property(e => e.IsActive)
-                    .HasDefaultValue(1);
-
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Customers)
                     .HasForeignKey(d => d.CountryId)
@@ -255,6 +252,28 @@ namespace HF6SvendeAPI.Data
                 entity.Property(e => e.File);
             });
 
+            modelBuilder.Entity<Listing>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Title)
+                    .IsRequired();
+
+                entity.Property(e => e.Price)
+                    .IsRequired();
+
+                entity.Property(e => e.CreateDate)
+                    .IsRequired();
+
+                entity.Property(e => e.ExpireDate);
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.Listings)
+                    .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
             modelBuilder.Entity<Login>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -266,7 +285,7 @@ namespace HF6SvendeAPI.Data
                     .IsRequired();
 
                 entity.Property(e => e.UserType)
-                    .HasDefaultValue(0);
+                    .HasConversion<int>();
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Logins)
@@ -277,6 +296,9 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.Logins)
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(1);
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -369,9 +391,6 @@ namespace HF6SvendeAPI.Data
                 entity.Property(e => e.Brand)
                 .IsRequired();
 
-                entity.Property(e => e.Price)
-                .IsRequired();
-
                 entity.Property(e => e.Description)
                 .IsRequired();
 
@@ -420,6 +439,9 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.ProductImages)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(e => e.IsVerified)
+                    .HasDefaultValue(1);
             });
 
             modelBuilder.Entity<Role>(entity =>
