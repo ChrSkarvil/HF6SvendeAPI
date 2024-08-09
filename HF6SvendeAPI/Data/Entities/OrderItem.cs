@@ -14,10 +14,10 @@ namespace HF6SvendeAPI.Data.Entities
         public int Quantity { get; set; }
         [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
-        [ForeignKey(nameof(Product))]
-        public int ProductId { get; set; }
+        [ForeignKey(nameof(Listing))]
+        public int ListingId { get; set; }
 
         public virtual Order Order { get; set; } = null!;
-        public virtual Product Product { get; set; } = null!;
+        public virtual Listing Listing { get; set; } = null!;
     }
 }
