@@ -37,6 +37,7 @@ namespace HF6SvendeAPI.Data
         public virtual DbSet<ProductImage> ProductImages { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
 
+        //Connection to db
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -47,6 +48,7 @@ namespace HF6SvendeAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //CART
             modelBuilder.Entity<Cart>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -69,6 +71,7 @@ namespace HF6SvendeAPI.Data
 
             });
 
+            //CATEGORY
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -82,6 +85,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //COLOR
             modelBuilder.Entity<Color>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -90,6 +94,7 @@ namespace HF6SvendeAPI.Data
                 .IsRequired();
             });
 
+            //COUNTRY
             modelBuilder.Entity<Country>(entity =>
             {
 
@@ -102,6 +107,7 @@ namespace HF6SvendeAPI.Data
                 .IsRequired();
             });
 
+            //CUSTOMER
             modelBuilder.Entity<Customer>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -135,6 +141,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //DELIVERY
             modelBuilder.Entity<Delivery>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -163,6 +170,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //DEPARTMENT
             modelBuilder.Entity<Department>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -187,6 +195,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //EMPLOYEE
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -237,6 +246,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //GENDER
             modelBuilder.Entity<Gender>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -245,13 +255,19 @@ namespace HF6SvendeAPI.Data
                     .IsRequired();
             });
 
+            //IMAGE
             modelBuilder.Entity<Image>(entity =>
             {
                 entity.HasKey(e => e.Id);
 
-                entity.Property(e => e.File);
+                entity.Property(e => e.File)
+                .IsRequired();
+
+                entity.Property(e => e.CreateDate)
+                    .HasDefaultValueSql("GETDATE()");
             });
 
+            //LISTING
             modelBuilder.Entity<Listing>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -263,7 +279,7 @@ namespace HF6SvendeAPI.Data
                     .IsRequired();
 
                 entity.Property(e => e.CreateDate)
-                    .IsRequired();
+                    .HasDefaultValueSql("GETDATE()");
 
                 entity.Property(e => e.ExpireDate);
 
@@ -273,7 +289,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
-
+            //LOGIN
             modelBuilder.Entity<Login>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -301,6 +317,7 @@ namespace HF6SvendeAPI.Data
                     .HasDefaultValue(1);
             });
 
+            //ORDER
             modelBuilder.Entity<Order>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -324,6 +341,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //ORDERITEM
             modelBuilder.Entity<OrderItem>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -345,6 +363,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //PAYMENT
             modelBuilder.Entity<Payment>(entity =>
             {
 
@@ -365,6 +384,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //POSTALCODE
             modelBuilder.Entity<PostalCode>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -381,6 +401,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //PRODUCT
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -398,7 +419,7 @@ namespace HF6SvendeAPI.Data
                 .IsRequired();
 
                 entity.Property(e => e.CreateDate)
-                .IsRequired();
+                    .HasDefaultValueSql("GETDATE()");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
@@ -411,6 +432,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //PRODUCTCOLOR
             modelBuilder.Entity<ProductColor>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -426,6 +448,7 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            //PRODUCTIMAGE
             modelBuilder.Entity<ProductImage>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -444,6 +467,7 @@ namespace HF6SvendeAPI.Data
                     .HasDefaultValue(1);
             });
 
+            //ROLE
             modelBuilder.Entity<Role>(entity =>
             {
                 entity.HasKey(e => e.Id);

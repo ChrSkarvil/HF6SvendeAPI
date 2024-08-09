@@ -16,6 +16,8 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [StringLength(10)]
         public byte[]? File { get; set; } = null!;
+        [Required]
+        public DateTime CreateDate { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
     }
 }
