@@ -9,7 +9,6 @@ namespace HF6SvendeAPI.Data.Entities
         public Customer()
         {
             Carts = new HashSet<Cart>();
-            Logins = new HashSet<Login>();
             Orders = new HashSet<Order>();
             Payments = new HashSet<Payment>();
             Products = new HashSet<Product>();
@@ -42,8 +41,8 @@ namespace HF6SvendeAPI.Data.Entities
 
         public virtual PostalCode PostalCode { get; set; } = null!;
         public virtual Country Country { get; set; } = null!;
+        public virtual Login Login { get; set; } = null!;
         public virtual ICollection<Cart> Carts { get; set; }
-        public virtual ICollection<Login> Logins { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<Product> Products { get; set; }

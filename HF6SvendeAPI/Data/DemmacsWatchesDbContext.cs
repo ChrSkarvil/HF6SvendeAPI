@@ -314,13 +314,13 @@ namespace HF6SvendeAPI.Data
                     .HasConversion<int>();
 
                 entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.Logins)
-                    .HasForeignKey(d => d.CustomerId)
+                    .WithOne(p => p.Login)
+                    .HasForeignKey<Login>(d => d.CustomerId)
                     .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(d => d.Employee)
-                    .WithMany(p => p.Logins)
-                    .HasForeignKey(d => d.EmployeeId)
+                    .WithOne(p => p.Login)
+                    .HasForeignKey<Login>(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.Restrict);
 
                 entity.Property(e => e.IsActive)

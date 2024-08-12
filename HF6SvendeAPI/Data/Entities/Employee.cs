@@ -6,11 +6,6 @@ namespace HF6SvendeAPI.Data.Entities
 {
     public class Employee
     {
-        public Employee()
-        {
-            Logins = new HashSet<Login>();
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -46,6 +41,7 @@ namespace HF6SvendeAPI.Data.Entities
         public virtual PostalCode PostalCode { get; set; } = null!;
         public virtual Country Country { get; set; } = null!;
         public virtual Role Role { get; set; } = null!;
-        public virtual ICollection<Login> Logins { get; set; }
+        public virtual Login Login { get; set; } = null!;
+
     }
 }
