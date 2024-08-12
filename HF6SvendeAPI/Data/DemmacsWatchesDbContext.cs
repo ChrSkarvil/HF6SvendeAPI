@@ -34,7 +34,6 @@ namespace HF6SvendeAPI.Data
         public virtual DbSet<PostalCode> PostalCodes { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<ProductColor> ProductColors { get; set; } = null!;
-        public virtual DbSet<ProductImage> ProductImages { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
 
         //Connection to db
@@ -265,6 +264,14 @@ namespace HF6SvendeAPI.Data
 
                 entity.Property(e => e.CreateDate)
                     .HasDefaultValueSql("GETDATE()");
+
+                entity.HasOne(d => d.Product)
+                .WithMany(p => p.Images)
+                .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+                entity.Property(e => e.IsVerified)
+                    .HasDefaultValue(1);
             });
 
             //LISTING
@@ -453,25 +460,6 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.ProductColors)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            //PRODUCTIMAGE
-            modelBuilder.Entity<ProductImage>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-
-                entity.HasOne(d => d.Image)
-                    .WithMany(p => p.ProductImages)
-                    .HasForeignKey(d => d.ImageId)
-                    .OnDelete(DeleteBehavior.Restrict);
-
-                entity.HasOne(d => d.Product)
-                    .WithMany(p => p.ProductImages)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
-
-                entity.Property(e => e.IsVerified)
-                    .HasDefaultValue(1);
             });
 
             //ROLE

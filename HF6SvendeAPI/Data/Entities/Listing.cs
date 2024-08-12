@@ -33,7 +33,7 @@ namespace HF6SvendeAPI.Data.Entities
         public virtual Product Product { get; set; } = null!;
         public virtual Customer Customer { get; set; } = null!;
 
-        public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
+        public virtual ICollection<Image> Images { get; set; } = new List<Image>();
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         public virtual ICollection<Cart> Carts { get; set; }
 

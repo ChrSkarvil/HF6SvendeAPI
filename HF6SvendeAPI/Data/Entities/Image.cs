@@ -5,11 +5,6 @@ namespace HF6SvendeAPI.Data.Entities
 {
     public class Image
     {
-        public Image()
-        {
-            ProductImages = new HashSet<ProductImage>();
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -18,6 +13,12 @@ namespace HF6SvendeAPI.Data.Entities
         public byte[]? File { get; set; } = null!;
         [Required]
         public DateTime CreateDate { get; set; }
-        public virtual ICollection<ProductImage> ProductImages { get; set; }
+        [Required]
+        public bool IsVerified { get; set; }
+        [ForeignKey(nameof(Product))]
+        public int ProductId { get; set; }
+
+        public virtual Product Product { get; set; } = null!;
+
     }
 }
