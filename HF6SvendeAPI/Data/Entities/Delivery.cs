@@ -5,11 +5,6 @@ namespace HF6SvendeAPI.Data.Entities
 {
     public class Delivery
     {
-        public Delivery()
-        {
-            Orders = new HashSet<Order>();
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -28,6 +23,7 @@ namespace HF6SvendeAPI.Data.Entities
 
         public virtual PostalCode PostalCode { get; set; } = null!;
         public virtual Country Country { get; set; } = null!;
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual Order Order { get; set; } = null!;
+
     }
 }

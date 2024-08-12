@@ -64,9 +64,9 @@ namespace HF6SvendeAPI.Data
                     .HasForeignKey(d => d.CustomerId)
                     .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(d => d.Product)
+                entity.HasOne(d => d.Listing)
                     .WithMany(p => p.Carts)
-                    .HasForeignKey(d => d.ProductId)
+                    .HasForeignKey(d => d.ListingId)
                     .OnDelete(DeleteBehavior.Restrict);
 
             });
@@ -292,6 +292,11 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.Listings)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.Listings)
+                    .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
             //LOGIN
@@ -336,8 +341,8 @@ namespace HF6SvendeAPI.Data
                     .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(d => d.Delivery)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.DeliveryId)
+                    .WithOne(p => p.Order)
+                    .HasForeignKey<Order>(d => d.DeliveryId)
                     .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(d => d.Payment)

@@ -7,7 +7,6 @@ namespace HF6SvendeAPI.Data.Entities
     {
         public Product()
         {
-            Carts = new HashSet<Cart>();
             ProductColors = new HashSet<ProductColor>();
             ProductImages = new HashSet<ProductImage>();
             Listings = new HashSet<Listing>();
@@ -37,7 +36,6 @@ namespace HF6SvendeAPI.Data.Entities
 
         public virtual Category Category { get; set; } = null!;
         public virtual Customer Customer { get; set; } = null!;
-        public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<ProductColor> ProductColors { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
         public virtual ICollection<Listing> Listings { get; set; }

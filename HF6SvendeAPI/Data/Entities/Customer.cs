@@ -13,6 +13,7 @@ namespace HF6SvendeAPI.Data.Entities
             Orders = new HashSet<Order>();
             Payments = new HashSet<Payment>();
             Products = new HashSet<Product>();
+            Listings = new HashSet<Listing>();
         }
 
         [Key]
@@ -46,5 +47,7 @@ namespace HF6SvendeAPI.Data.Entities
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Listing> Listings { get; set; }
+
     }
 }

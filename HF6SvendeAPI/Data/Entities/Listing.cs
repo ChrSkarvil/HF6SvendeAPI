@@ -8,6 +8,7 @@ namespace HF6SvendeAPI.Data.Entities
         public Listing() 
         {
             OrderItems = new HashSet<OrderItem>();
+            Carts = new HashSet<Cart>();
         }
 
         [Key]
@@ -26,10 +27,16 @@ namespace HF6SvendeAPI.Data.Entities
         public bool IsActive { get; set; }
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
+        [ForeignKey(nameof(Customer))]
+        public int CustomerId { get; set; }
 
         public virtual Product Product { get; set; } = null!;
+        public virtual Customer Customer { get; set; } = null!;
+
         public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<Cart> Carts { get; set; }
+
 
 
         public bool IsListingVerified { get; set; }

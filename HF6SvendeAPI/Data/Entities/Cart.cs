@@ -12,12 +12,12 @@ namespace HF6SvendeAPI.Data.Entities
         public int Quantity { get; set; }
         [Required]
         public DateTime CreateDate { get; set; }
-        [ForeignKey(nameof(Product))]
-        public int ProductId { get; set; }
+        [ForeignKey(nameof(Listing))]
+        public int ListingId { get; set; }
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
 
-        public virtual Product Product { get; set; } = null!;
+        public virtual Listing Listing { get; set; } = null!;
         public virtual Customer Customer { get; set; } = null!;
     }
 }
