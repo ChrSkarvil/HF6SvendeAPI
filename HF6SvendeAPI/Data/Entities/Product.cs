@@ -9,7 +9,6 @@ namespace HF6SvendeAPI.Data.Entities
         {
             ProductColors = new HashSet<ProductColor>();
             ProductImages = new HashSet<ProductImage>();
-            Listings = new HashSet<Listing>();
         }
 
         [Key]
@@ -27,8 +26,6 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [StringLength(30)]
         public string Size { get; set; } = null!;
-        [Required]
-        public DateTime CreateDate { get; set; }
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
         [ForeignKey(nameof(Category))]
@@ -36,10 +33,9 @@ namespace HF6SvendeAPI.Data.Entities
 
         public virtual Category Category { get; set; } = null!;
         public virtual Customer Customer { get; set; } = null!;
+        public virtual Listing Listing { get; set; } = null!;
         public virtual ICollection<ProductColor> ProductColors { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
-        public virtual ICollection<Listing> Listings { get; set; }
-
 
     }
 }

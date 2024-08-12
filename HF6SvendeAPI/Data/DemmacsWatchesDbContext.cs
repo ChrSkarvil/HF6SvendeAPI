@@ -289,13 +289,13 @@ namespace HF6SvendeAPI.Data
                     .HasDefaultValue(1);
 
                 entity.HasOne(d => d.Product)
-                    .WithMany(p => p.Listings)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                    .WithOne(p => p.Listing)
+                    .HasForeignKey<Listing>(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Listings)
-                    .HasForeignKey(d => d.ProductId)
+                    .HasForeignKey(d => d.CustomerId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
@@ -427,9 +427,6 @@ namespace HF6SvendeAPI.Data
 
                 entity.Property(e => e.Size)
                 .IsRequired();
-
-                entity.Property(e => e.CreateDate)
-                    .HasDefaultValueSql("GETDATE()");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
