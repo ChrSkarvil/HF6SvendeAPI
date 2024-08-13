@@ -1605,6 +1605,46 @@
             "rid": "win"
           }
         }
+      },
+      "HF6Svende.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "HF6Svende.Core": "1.0.0",
+          "HF6Svende.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HF6Svende.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HF6Svende.Application.dll": {}
+        }
+      },
+      "HF6Svende.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/HF6Svende.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HF6Svende.Core.dll": {}
+        }
+      },
+      "HF6Svende.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "HF6Svende.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+        },
+        "compile": {
+          "bin/placeholder/HF6Svende.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HF6Svende.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -4543,11 +4583,27 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "HF6Svende.Application/1.0.0": {
+      "type": "project",
+      "path": "../HF6Svende.Application/HF6Svende.Application.csproj",
+      "msbuildProject": "../HF6Svende.Application/HF6Svende.Application.csproj"
+    },
+    "HF6Svende.Core/1.0.0": {
+      "type": "project",
+      "path": "../HF6Svende.Core/HF6Svende.Core.csproj",
+      "msbuildProject": "../HF6Svende.Core/HF6Svende.Core.csproj"
+    },
+    "HF6Svende.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../HF6Svende.Infrastructure/HF6Svende.Infrastructure.csproj",
+      "msbuildProject": "../HF6Svende.Infrastructure/HF6Svende.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
+      "HF6Svende.Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7",
@@ -4586,7 +4642,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj": {
+              "projectPath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

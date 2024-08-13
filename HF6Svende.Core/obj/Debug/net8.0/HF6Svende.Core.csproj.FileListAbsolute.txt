@@ -1,0 +1,12 @@
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.deps.json
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.dll
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.pdb
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.AssemblyInfoInputs.cache
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.AssemblyInfo.cs
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.csproj.CoreCompileInputs.cache
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.sourcelink.json
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.dll
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\refint\HF6Svende.Core.dll
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.pdb
+C:\Users\HFGF\source\repos\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\ref\HF6Svende.Core.dll
