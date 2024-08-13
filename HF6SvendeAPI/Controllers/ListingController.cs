@@ -1,4 +1,4 @@
-﻿using HF6Svende.Application.DTO;
+﻿using HF6Svende.Application.DTO.Listing;
 using HF6Svende.Application.Service_Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +25,7 @@ namespace HF6SvendeAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error: " + ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -43,7 +43,7 @@ namespace HF6SvendeAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error: " + ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -62,8 +62,46 @@ namespace HF6SvendeAPI.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error: " + ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateListing(int id, [FromBody] UpdateListingDto updateListingDto)
+        {
+            try
+            {
+                var updatedListing = await _listingService.UpdateListingAsync(id, updateListingDto);
+                if (updatedListing == null)
+                {
+                    return NotFound("Listing not found.");
+                }
+
+                return Ok(updatedListing);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteListing(int id)
+        {
+            try
+            {
+                var success = await _listingService.DeleteListingAsync(id);
+                if (!success)
+                {
+                    return NotFound();
+                }
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
     }
 }

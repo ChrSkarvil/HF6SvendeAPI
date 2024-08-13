@@ -12,5 +12,9 @@ namespace HF6Svende.Core.Interfaces
         Task<List<Listing>> GetAllListingsAsync();
         Task<Listing?> GetListingByIdAsync(int id);
         Task<Listing> CreateListingAsync(Listing listing);
+        Task<Listing> UpdateListingAsync(Listing listing);
+        Task<bool> DeleteListingAsync(int id);
+
+
     }
 }

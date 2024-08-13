@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HF6Svende.Application.DTO
+namespace HF6Svende.Application.DTO.Listing
 {
-    public class ListingDto
+    public class CreateListingDto
     {
-        public int Id { get; set; }
         public string Title { get; set; } = null!;
+
         public decimal Price { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime? ExpireDate { get; set; }
         public DateTime? SoldDate { get; set; }
-        public bool IsActive { get; set; }
-        public string? CustomerName { get; set; } = null!;
 
-        //Product data
-        public ProductDto Product { get; set; } = null!;
+        public int ProductId { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public bool IsActive { get; set; }
+        public bool IsListingVerified { get; set; }
+
     }
 }
