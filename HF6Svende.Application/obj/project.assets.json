@@ -2822,11 +2822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
+      "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
       "projectName": "HF6Svende.Application",
-      "projectPath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
+      "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
       "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Application\\obj\\",
+      "outputPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2848,11 +2848,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
-              "projectPath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
+            "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
+              "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
             },
-            "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj"
+            "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj"
             }
           }
         }

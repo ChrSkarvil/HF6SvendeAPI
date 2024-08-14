@@ -47,7 +47,7 @@ namespace HF6Svende.Application.Services
         {
             try
             {
-                //Delete product
+                // Delete product
                 var success = await _productRepository.DeleteProductAsync(id);
                 return success;
             }
@@ -92,7 +92,7 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ProductDTO> UpdateProductAsync(int id, ProductUpdateDTO updateProductDto)
+        public async Task<ProductDTO?> UpdateProductAsync(int id, ProductUpdateDTO updateProductDto)
         {
             try
             {

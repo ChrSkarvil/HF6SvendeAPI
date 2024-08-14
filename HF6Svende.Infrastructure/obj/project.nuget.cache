@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKEHqj8Iius=",
+  "dgSpecHash": "yl6O3LjTyTM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HFGF\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

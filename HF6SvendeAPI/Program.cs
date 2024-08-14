@@ -18,12 +18,17 @@ builder.Services.AddDbContext<DemmacsWatchesDbContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("localhost")));
 
 // Add references
-//Listings
+// Listings
 builder.Services.AddScoped<IListingRepository, ListingRepository>();
 builder.Services.AddScoped<IListingService, ListingService>();
-//Products
+// Products
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+// Customers
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+// Postalcodes
+builder.Services.AddScoped<IPostalCodeRepository, PostalCodeRepository>();
 
 // Add services to the container.
 builder.Services.AddControllers();

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using HF6Svende.Application.DTO;
+using HF6Svende.Application.DTO.Customer;
 using HF6Svende.Application.DTO.Listing;
 using HF6Svende.Application.DTO.Product;
 using HF6SvendeAPI.Data.Entities;
@@ -29,10 +30,10 @@ namespace HF6Svende.Application.Mappings
                     }));
 
 
-            // CreateListingDto
+            // CreateListingDTO
             CreateMap<ListingCreateDTO, Listing>()
-            .ForMember(dest => dest.Customer, opt => opt.Ignore())
-            .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId));
+                .ForMember(dest => dest.Customer, opt => opt.Ignore())
+                .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId));
 
             // UpdateListingDto
             CreateMap<ListingUpdateDTO, Listing>()
@@ -50,15 +51,32 @@ namespace HF6Svende.Application.Mappings
                     opt.MapFrom(src => src.Customer.FirstName + " " + src.Customer.LastName))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
 
-            // CreateProductDto
+            // CreateProductDTO
             CreateMap<ProductCreateDTO, Product>()
-            .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
-            .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
+                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
+                .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
 
-            // CreateProductDto
+            // CreateProductDTO
             CreateMap<ProductUpdateDTO, Product>()
-            .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
+                .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
 
+            // Customers
+            CreateMap<Customer, CustomerDTO>()
+                .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.PostalCode.PostCode))
+                .ForMember(dest => dest.CountryCode, opt => opt.MapFrom(src => src.Country.CountryCode));
+            //.ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.PostalCode.PostCode));
+
+            // CreateCustomerDTO
+            CreateMap<CustomerCreateDTO, Customer>()
+                .ForMember(dest => dest.PostalCodeId, opt => opt.MapFrom(src => src.PostalCodeId))
+                .ForMember(dest => dest.CountryId, opt => opt.MapFrom(src => src.CountryId))
+                .ForMember(dest => dest.PostalCode, opt => opt.Ignore());
+
+            // UpdateCustomerDTO
+            CreateMap<CustomerUpdateDTO, Customer>()
+                .ForMember(dest => dest.PostalCodeId, opt => opt.MapFrom(src => src.PostalCodeId))
+                .ForMember(dest => dest.CountryId, opt => opt.MapFrom(src => src.CountryId))
+                .ForMember(dest => dest.PostalCode, opt => opt.Ignore());
         }
     }
 }

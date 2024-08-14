@@ -27,6 +27,7 @@ namespace HF6Svende.Infrastructure.Repository
                 _context.Products.Add(product);
                 await _context.SaveChangesAsync();
                 await _context.Entry(product).Reference(l => l.Customer).LoadAsync();
+                await _context.Entry(product).Reference(l => l.Category).LoadAsync();
                 return product;
             }
             catch (Exception ex)
@@ -79,7 +80,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
         }
 
-        public async Task<Product> UpdateProductAsync(Product product)
+        public async Task<Product?> UpdateProductAsync(Product product)
         {
             try
             {
