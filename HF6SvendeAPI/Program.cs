@@ -6,6 +6,7 @@ using HF6SvendeAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using HF6Svende.Application.Mappings;
+using HF6Svende.Core.Repository_Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +18,12 @@ builder.Services.AddDbContext<DemmacsWatchesDbContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("localhost")));
 
 // Add references
+//Listings
 builder.Services.AddScoped<IListingRepository, ListingRepository>();
 builder.Services.AddScoped<IListingService, ListingService>();
+//Products
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Add services to the container.
 builder.Services.AddControllers();

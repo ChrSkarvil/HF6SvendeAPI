@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HF6Svende.Application.DTO.Listing
 {
-    public class CreateListingDto
+    public class ListingCreateDTO
     {
         public string Title { get; set; } = null!;
 

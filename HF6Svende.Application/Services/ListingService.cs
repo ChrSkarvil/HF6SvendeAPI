@@ -23,7 +23,7 @@ namespace HF6Svende.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<List<ListingDto>> GetAllListingsAsync()
+        public async Task<List<ListingDTO>> GetAllListingsAsync()
         {
             try
             {
@@ -31,7 +31,7 @@ namespace HF6Svende.Application.Services
                 var listings = await _listingRepository.GetAllListingsAsync();
 
                 // Mapping back to dto
-                return _mapper.Map<List<ListingDto>>(listings);
+                return _mapper.Map<List<ListingDTO>>(listings);
 
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@ namespace HF6Svende.Application.Services
 
         }
 
-        public async Task<ListingDto?> GetListingByIdAsync(int id)
+        public async Task<ListingDTO?> GetListingByIdAsync(int id)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace HF6Svende.Application.Services
                 if (listing == null) return null;
 
                 // Mapping back to dto
-                return _mapper.Map<ListingDto>(listing);
+                return _mapper.Map<ListingDTO>(listing);
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace HF6Svende.Application.Services
 
         }
 
-        public async Task<ListingDto> CreateListingAsync(CreateListingDto createListingDto)
+        public async Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace HF6Svende.Application.Services
                 var createdListing = await _listingRepository.CreateListingAsync(listing);
 
                 // Mapping back to dto
-                return _mapper.Map<ListingDto>(createdListing);
+                return _mapper.Map<ListingDTO>(createdListing);
             }
             catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDto> UpdateListingAsync(int id, UpdateListingDto updateListingDto)
+        public async Task<ListingDTO> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace HF6Svende.Application.Services
                 var updatedListing = await _listingRepository.UpdateListingAsync(listing);
 
                 // Mapping back to dto
-                return _mapper.Map<ListingDto>(updatedListing);
+                return _mapper.Map<ListingDTO>(updatedListing);
             }
             catch (Exception ex)
             {

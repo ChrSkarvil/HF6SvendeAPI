@@ -48,7 +48,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ListingDto>> CreateListing([FromBody] CreateListingDto createListingDto)
+        public async Task<ActionResult<ListingDTO>> CreateListing([FromBody] ListingCreateDTO createListingDto)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateListing(int id, [FromBody] UpdateListingDto updateListingDto)
+        public async Task<IActionResult> UpdateListing(int id, [FromBody] ListingUpdateDTO updateListingDto)
         {
             try
             {

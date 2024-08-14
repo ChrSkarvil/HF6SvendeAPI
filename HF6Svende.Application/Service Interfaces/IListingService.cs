@@ -10,10 +10,10 @@ namespace HF6Svende.Application.Service_Interfaces
 {
     public interface IListingService
     {
-        Task<List<ListingDto>> GetAllListingsAsync();
-        Task<ListingDto?> GetListingByIdAsync(int id);
-        Task<ListingDto> CreateListingAsync(CreateListingDto createListingDto);
-        Task<ListingDto> UpdateListingAsync(int id, UpdateListingDto updateListingDto);
+        Task<List<ListingDTO>> GetAllListingsAsync();
+        Task<ListingDTO?> GetListingByIdAsync(int id);
+        Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto);
+        Task<ListingDTO> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto);
         Task<bool> DeleteListingAsync(int id);
 
     }

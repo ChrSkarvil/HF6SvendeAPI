@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HF6Svende.Application.DTO
+namespace HF6Svende.Application.DTO.Listing
 {
-    public class ProductDto
+    public class ProductInListingDTO
     {
         public int Id { get; set; }
         public string Brand { get; set; } = null!;

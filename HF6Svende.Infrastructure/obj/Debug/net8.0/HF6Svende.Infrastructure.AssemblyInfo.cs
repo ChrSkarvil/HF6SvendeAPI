@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HF6Svende.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84505326551641007d1971d8552c61b57fd81146")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a261c247155ef540bdef6cad2485230ed6e55590")]
 [assembly: System.Reflection.AssemblyProductAttribute("HF6Svende.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HF6Svende.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

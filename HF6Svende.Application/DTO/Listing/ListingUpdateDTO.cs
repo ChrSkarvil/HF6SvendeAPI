@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HF6Svende.Application.DTO.Listing
 {
-    public class UpdateListingDto
+    public class ListingUpdateDTO
     {
         public string Title { get; set; } = null!;
         public decimal Price { get; set; }

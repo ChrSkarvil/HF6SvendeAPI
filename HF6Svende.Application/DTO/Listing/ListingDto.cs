@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HF6Svende.Application.DTO.Listing
 {
-    public class ListingDto
+    public class ListingDTO
     {
         public int Id { get; set; }
         public string Title { get; set; } = null!;
@@ -15,9 +15,10 @@ namespace HF6Svende.Application.DTO.Listing
         public DateTime? ExpireDate { get; set; }
         public DateTime? SoldDate { get; set; }
         public bool IsActive { get; set; }
+        public int CustomerId { get; set; }
         public string? CustomerName { get; set; } = null!;
 
         //Product data
-        public ProductDto Product { get; set; } = null!;
+        public ProductInListingDTO Product { get; set; } = null!;
     }
 }
