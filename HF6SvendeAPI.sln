@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF6SvendeAPI", "HF6SvendeAPI\HF6SvendeAPI.csproj", "{231B2C64-9B53-497E-AFD3-A3840FA27535}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HF6SvendeAPI", "HF6SvendeAPI\HF6SvendeAPI.csproj", "{231B2C64-9B53-497E-AFD3-A3840FA27535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF6Svende.Core", "HF6Svende.Core\HF6Svende.Core.csproj", "{290CBC93-B944-4547-9F75-FB24D3C538E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF6Svende.Infrastructure", "HF6Svende.Infrastructure\HF6Svende.Infrastructure.csproj", "{C98DD5C5-A082-4238-A48A-8D33422DD8E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF6Svende.Application", "HF6Svende.Application\HF6Svende.Application.csproj", "{128B6C4C-9092-4DA3-9116-F9375D29B5C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{231B2C64-9B53-497E-AFD3-A3840FA27535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{231B2C64-9B53-497E-AFD3-A3840FA27535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{231B2C64-9B53-497E-AFD3-A3840FA27535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290CBC93-B944-4547-9F75-FB24D3C538E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290CBC93-B944-4547-9F75-FB24D3C538E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290CBC93-B944-4547-9F75-FB24D3C538E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290CBC93-B944-4547-9F75-FB24D3C538E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98DD5C5-A082-4238-A48A-8D33422DD8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98DD5C5-A082-4238-A48A-8D33422DD8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98DD5C5-A082-4238-A48A-8D33422DD8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98DD5C5-A082-4238-A48A-8D33422DD8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128B6C4C-9092-4DA3-9116-F9375D29B5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128B6C4C-9092-4DA3-9116-F9375D29B5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128B6C4C-9092-4DA3-9116-F9375D29B5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128B6C4C-9092-4DA3-9116-F9375D29B5C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
