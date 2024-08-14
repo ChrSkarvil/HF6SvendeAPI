@@ -36,7 +36,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
 
         }
@@ -55,7 +55,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
 
         }

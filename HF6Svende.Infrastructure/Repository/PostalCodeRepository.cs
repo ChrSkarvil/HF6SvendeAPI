@@ -26,7 +26,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the postalcodes.", ex);
+                throw new Exception("An error occurred while getting the postalcodes.", ex);
             }
         }
 
@@ -38,7 +38,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the postalcode.", ex);
+                throw new Exception("An error occurred while getting the postalcode.", ex);
             }
         }
     }

@@ -27,7 +27,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listings.", ex);
+                throw new Exception("An error occurred while getting the listings.", ex);
             }
 
         }
@@ -40,7 +40,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
         }
 

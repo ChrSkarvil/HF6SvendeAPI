@@ -419,7 +419,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("ProductId")
                         .IsUnique();
 
-                    b.ToTable("Listing");
+                    b.ToTable("Listings");
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Login", b =>
@@ -659,9 +659,10 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Name")
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 

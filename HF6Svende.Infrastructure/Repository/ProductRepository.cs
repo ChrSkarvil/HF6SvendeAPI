@@ -64,7 +64,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the products.", ex);
+                throw new Exception("An error occurred while getting the products.", ex);
             }
         }
 
@@ -76,7 +76,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the product.", ex);
+                throw new Exception("An error occurred while getting the product.", ex);
             }
         }
 

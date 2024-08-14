@@ -220,7 +220,7 @@ namespace HF6SvendeAPI.Data
                     .IsRequired();
 
                 entity.Property(e => e.HireDate)
-                    .IsRequired();
+                    .HasDefaultValueSql("GETDATE()");
 
                 entity.Property(e => e.EndDate)
                     .HasDefaultValueSql("NULL");

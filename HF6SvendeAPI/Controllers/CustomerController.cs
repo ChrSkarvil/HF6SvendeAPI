@@ -66,6 +66,7 @@ namespace HF6SvendeAPI.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(int id, [FromBody] CustomerUpdateDTO updateCustomerDto)
         {

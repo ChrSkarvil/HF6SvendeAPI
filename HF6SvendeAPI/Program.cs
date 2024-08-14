@@ -29,6 +29,12 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 // Postalcodes
 builder.Services.AddScoped<IPostalCodeRepository, PostalCodeRepository>();
+// Countries
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+builder.Services.AddScoped<ICountryService, CountryService>();
+// Employees
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 // Add services to the container.
 builder.Services.AddControllers();

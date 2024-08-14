@@ -14,9 +14,9 @@ namespace HF6Svende.Application.DTO.Customer
         public long Phone { get; set; }
         public string Email { get; set; } = null!;
         public DateTime CreateDate { get; set; }
-        public int? PostalCodeId { get; set; }
-        public int CountryId { get; set; }
-
         public string PostalCode { get; set; } = null!;
+        public string CountryName { get; set; } = null!;
+        public int? PostalCodeId { get; set; }
+        public int? CountryId { get; set; }
     }
 }

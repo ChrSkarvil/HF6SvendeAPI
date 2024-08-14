@@ -17,13 +17,15 @@ namespace HF6Svende.Application.Services
     {
         private readonly ICustomerRepository _customerRepository;
         private readonly IPostalCodeRepository _postalCodeRepository;
+        private readonly ICountryRepository _countryRepository;
         private readonly IMapper _mapper;
 
 
-        public CustomerService(ICustomerRepository customerRepository, IPostalCodeRepository postalCodeRepository, IMapper mapper)
+        public CustomerService(ICustomerRepository customerRepository, IPostalCodeRepository postalCodeRepository, ICountryRepository countryRepository, IMapper mapper)
         {
             _customerRepository = customerRepository;
             _postalCodeRepository = postalCodeRepository;
+            _countryRepository = countryRepository;
             _mapper = mapper;
         }
         public async Task<CustomerDTO> CreateCustomerAsync(CustomerCreateDTO createCustomerDto)
@@ -39,6 +41,16 @@ namespace HF6Svende.Application.Services
 
                 // Set the PostalCodeId to the found postal code's ID
                 createCustomerDto.PostalCodeId = postalCode.Id;
+
+                //Look up the country in the repository
+                var country = await _countryRepository.GetCountryByNameAsync(createCustomerDto.CountryName);
+                if (country == null)
+                {
+                    throw new Exception("Country not found.");
+                }
+
+                // Set the CountryId to the found country's ID
+                createCustomerDto.CountryId = country.Id;
 
                 // Mapping dto to entity
                 var customer = _mapper.Map<Customer>(createCustomerDto);
@@ -82,7 +94,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the customer.", ex);
+                throw new Exception("An error occurred while getting the customer.", ex);
             }
         }
 
@@ -100,7 +112,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the customer.", ex);
+                throw new Exception("An error occurred while getting the customer.", ex);
             }
         }
 
@@ -124,6 +136,16 @@ namespace HF6Svende.Application.Services
 
                 // Set the PostalCodeId to the found postal code's ID
                 updateCustomerDto.PostalCodeId = postalCode.Id;
+
+                //Look up the country in the repository
+                var country = await _countryRepository.GetCountryByNameAsync(updateCustomerDto.CountryName);
+                if (country == null)
+                {
+                    throw new Exception("Country not found.");
+                }
+
+                // Set the CountryId to the found country's ID
+                updateCustomerDto.CountryId = country.Id;
 
                 // Mapping dto to entity
                 _mapper.Map(updateCustomerDto, customer);

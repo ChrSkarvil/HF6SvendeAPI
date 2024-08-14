@@ -62,7 +62,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the customers.", ex);
+                throw new Exception("An error occurred while getting the customers.", ex);
             }
         }
 
@@ -74,7 +74,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the customer.", ex);
+                throw new Exception("An error occurred while getting the customer.", ex);
             }
         }
 
