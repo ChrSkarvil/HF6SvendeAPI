@@ -40,6 +40,10 @@ builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 // Roles
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+// Images
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
+builder.Services.AddScoped<IImageService, ImageService>();
+
 
 // Add services to the container.
 builder.Services.AddControllers();

@@ -14,5 +14,7 @@ namespace HF6Svende.Application.DTO.Product
         public string Size { get; set; } = null!;
         public string? CategoryName { get; set; } = null!;
         public int CategoryId { get; set; }
+
+        public List<ImageDto> Images { get; set; } = new List<ImageDto>();
     }
 }

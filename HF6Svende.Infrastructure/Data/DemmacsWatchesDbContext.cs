@@ -270,7 +270,7 @@ namespace HF6SvendeAPI.Data
                 entity.HasOne(d => d.Product)
                 .WithMany(p => p.Images)
                 .HasForeignKey(d => d.ProductId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
                 entity.Property(e => e.IsVerified)
                     .HasDefaultValue(1);

@@ -9,8 +9,8 @@ namespace HF6SvendeAPI.Data.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        [StringLength(10)]
-        public byte[]? File { get; set; } = null!;
+        [Column(TypeName = "VARBINARY(MAX)")]
+        public byte[] File { get; set; } = null!;
         [Required]
         public DateTime CreateDate { get; set; }
         [Required]

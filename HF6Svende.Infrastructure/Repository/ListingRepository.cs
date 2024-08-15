@@ -23,7 +23,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Listings.Include(l => l.Product).Include(l => l.Customer).ToListAsync();
+                return await _context.Listings.Include(l => l.Customer).Include(l => l.Product).ThenInclude(p => p.Category).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Listings.Include(l => l.Product).Include(l => l.Customer).FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Listings.Include(l => l.Customer).Include(l => l.Product).ThenInclude(p => p.Category).FirstOrDefaultAsync(l => l.Id == id);
             }
             catch (Exception ex)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HF6Svende.Application.DTO.Product;
 
 namespace HF6Svende.Application.DTO.Listing
 {
@@ -19,6 +20,6 @@ namespace HF6Svende.Application.DTO.Listing
         public string? CustomerName { get; set; } = null!;
 
         //Product data
-        public ProductInListingDTO Product { get; set; } = null!;
+        public ProductDTO Product { get; set; } = null!;
     }
 }

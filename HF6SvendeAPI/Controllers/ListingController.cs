@@ -48,7 +48,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ListingDTO>> CreateListing([FromBody] ListingCreateDTO createListingDto)
+        public async Task<ActionResult<ListingDTO>> CreateListing([FromForm] ListingCreateDTO createListingDto)
         {
             try
             {

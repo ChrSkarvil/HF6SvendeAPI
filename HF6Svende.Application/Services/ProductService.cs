@@ -61,6 +61,7 @@ namespace HF6Svende.Application.Services
         {
             try
             {
+
                 // Get all products
                 var products = await _productRepository.GetAllProductsAsync();
 

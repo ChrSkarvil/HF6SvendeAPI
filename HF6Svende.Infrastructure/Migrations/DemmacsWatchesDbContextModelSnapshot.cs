@@ -350,8 +350,7 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     b.Property<byte[]>("File")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("varbinary(10)");
+                        .HasColumnType("VARBINARY(MAX)");
 
                     b.Property<bool>("IsVerified")
                         .ValueGeneratedOnAdd()
@@ -802,7 +801,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasOne("HF6SvendeAPI.Data.Entities.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
