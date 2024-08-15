@@ -35,8 +35,8 @@ namespace HF6Svende.Application.Mappings
 
             // CreateListingDTO
             CreateMap<ListingCreateDTO, Listing>()
-                .ForMember(dest => dest.Customer, opt => opt.Ignore())
-                .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId));
+                .ForMember(dest => dest.Product, opt => opt.Ignore())
+                .ForMember(dest => dest.Customer, opt => opt.Ignore());
 
             // UpdateListingDto
             CreateMap<ListingUpdateDTO, Listing>()
@@ -50,13 +50,10 @@ namespace HF6Svende.Application.Mappings
 
             // Products
             CreateMap<Product, ProductDTO>()
-                .ForMember(dest => dest.CustomerName, opt =>
-                    opt.MapFrom(src => src.Customer.FirstName + " " + src.Customer.LastName))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
 
             // CreateProductDTO
             CreateMap<ProductCreateDTO, Product>()
-                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
                 .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
 
             // CreateProductDTO

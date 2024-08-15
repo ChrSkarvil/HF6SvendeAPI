@@ -12,9 +12,7 @@ namespace HF6Svende.Application.DTO.Product
         public string Brand { get; set; } = null!;
         public string Description { get; set; } = null!;
         public string Size { get; set; } = null!;
-        public string? CustomerName { get; set; } = null!;
         public string? CategoryName { get; set; } = null!;
-        public int CustomerId { get; set; }
         public int CategoryId { get; set; }
     }
 }

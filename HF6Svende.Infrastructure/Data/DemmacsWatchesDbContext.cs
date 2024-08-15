@@ -438,11 +438,6 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.Restrict);
-
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.Restrict);
             });
 
             //PRODUCTCOLOR

@@ -26,7 +26,6 @@ namespace HF6Svende.Infrastructure.Repository
             {
                 _context.Products.Add(product);
                 await _context.SaveChangesAsync();
-                await _context.Entry(product).Reference(l => l.Customer).LoadAsync();
                 await _context.Entry(product).Reference(l => l.Category).LoadAsync();
                 return product;
             }
@@ -60,7 +59,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Customer).ToListAsync();
+                return await _context.Products.Include(l => l.Category).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -72,7 +71,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Customer).FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Products.Include(l => l.Category).FirstOrDefaultAsync(l => l.Id == id);
             }
             catch (Exception ex)
             {
