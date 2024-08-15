@@ -12,7 +12,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<EmployeeDTO>> GetAllEmployeesAsync();
         Task<EmployeeDTO?> GetEmployeeByIdAsync(int id);
         Task<EmployeeDTO> CreateEmployeeAsync(EmployeeCreateDTO createEmployeeDto);
-        Task<EmployeeDTO> UpdateEmployeeAsync(int id, EmployeeUpdateDTO updateEmployeeDto);
+        Task<EmployeeDTO?> UpdateEmployeeAsync(int id, EmployeeUpdateDTO updateEmployeeDto);
         Task<bool> DeleteEmployeeAsync(int id);
     }
 }

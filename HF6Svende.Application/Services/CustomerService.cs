@@ -116,16 +116,13 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<CustomerDTO> UpdateCustomerAsync(int id, CustomerUpdateDTO updateCustomerDto)
+        public async Task<CustomerDTO?> UpdateCustomerAsync(int id, CustomerUpdateDTO updateCustomerDto)
         {
             try
             {
                 // Get existing customer
                 var customer = await _customerRepository.GetCustomerByIdAsync(id);
-                if (customer == null)
-                {
-                    throw new Exception("Customer not found.");
-                }
+                if (customer == null) return null;
 
                 //Look up the postal code in the repository
                 var postalCode = await _postalCodeRepository.GetPostalCodeByCodeAsync(updateCustomerDto.PostalCode);

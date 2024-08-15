@@ -116,16 +116,13 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<EmployeeDTO> UpdateEmployeeAsync(int id, EmployeeUpdateDTO updateEmployeeDto)
+        public async Task<EmployeeDTO?> UpdateEmployeeAsync(int id, EmployeeUpdateDTO updateEmployeeDto)
         {
             try
             {
                 // Get existing employee
                 var employee = await _employeeRepository.GetEmployeeByIdAsync(id);
-                if (employee == null)
-                {
-                    throw new Exception("Employee not found.");
-                }
+                if (employee == null) return null;
 
                 //Look up the postal code in the repository
                 var postalCode = await _postalCodeRepository.GetPostalCodeByCodeAsync(updateEmployeeDto.PostalCode);

@@ -98,10 +98,7 @@ namespace HF6Svende.Application.Services
             {
                 // Get existing product
                 var product = await _productRepository.GetProductByIdAsync(id);
-                if (product == null)
-                {
-                    throw new Exception("Product not found.");
-                }
+                if (product == null) return null;
 
                 // Mapping dto to entity
                 _mapper.Map(updateProductDto, product);

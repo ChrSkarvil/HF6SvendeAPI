@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8aB7fcMnMtM=",
+  "dgSpecHash": "ZLEORtc/UMs=",
   "success": true,
   "projectFilePath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HFGF\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\HFGF\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\HFGF\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

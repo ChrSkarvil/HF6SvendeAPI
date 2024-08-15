@@ -35,6 +35,11 @@ builder.Services.AddScoped<ICountryService, CountryService>();
 // Employees
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+// Logins
+builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+// Roles
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 // Add services to the container.
 builder.Services.AddControllers();

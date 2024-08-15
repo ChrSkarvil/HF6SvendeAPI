@@ -13,7 +13,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<CustomerDTO>> GetAllCustomersAsync();
         Task<CustomerDTO?> GetCustomerByIdAsync(int id);
         Task<CustomerDTO> CreateCustomerAsync(CustomerCreateDTO createCustomerDto);
-        Task<CustomerDTO> UpdateCustomerAsync(int id, CustomerUpdateDTO updateCustomerDto);
+        Task<CustomerDTO?> UpdateCustomerAsync(int id, CustomerUpdateDTO updateCustomerDto);
         Task<bool> DeleteCustomerAsync(int id);
     }
 }

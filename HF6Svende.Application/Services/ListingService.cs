@@ -79,16 +79,13 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDTO> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
+        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
         {
             try
             {
                 // Get existing listing
                 var listing = await _listingRepository.GetListingByIdAsync(id);
-                if (listing == null)
-                {
-                    throw new Exception("Listing not found.");
-                }
+                if (listing == null) return null;
 
                 // Mapping dto to entity
                 _mapper.Map(updateListingDto, listing);

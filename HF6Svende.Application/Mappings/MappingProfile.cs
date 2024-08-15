@@ -9,6 +9,7 @@ using HF6Svende.Application.DTO.Country;
 using HF6Svende.Application.DTO.Customer;
 using HF6Svende.Application.DTO.Employee;
 using HF6Svende.Application.DTO.Listing;
+using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Product;
 using HF6SvendeAPI.Data.Entities;
 
@@ -112,6 +113,34 @@ namespace HF6Svende.Application.Mappings
                 .ForMember(dest => dest.PostalCode, opt => opt.Ignore())
                 .ForMember(dest => dest.Role, opt => opt.Ignore())
                 .ForMember(dest => dest.Department, opt => opt.Ignore());
+
+            // Logins
+            CreateMap<Login, LoginDTO>()
+                .ForMember(dest => dest.UserType, opt => opt.MapFrom(src => (UserType)src.UserType))
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src =>
+                    src.CustomerId.HasValue && src.Customer != null
+                        ? src.Customer.FirstName + " " + src.Customer.LastName
+                        : src.Employee != null
+                        ? src.Employee.FirstName + " " + src.Employee.LastName 
+                        : string.Empty))
+                .ForMember(dest => dest.Role, opt => opt.MapFrom(src =>
+                    src.CustomerId.HasValue
+                        ? "Customer"
+                        : src.Employee != null && src.Employee.Role != null
+                        ? src.Employee.Role.Name
+                        : string.Empty));
+
+            // CreateLoginDTO
+            CreateMap<LoginCreateDTO, Login>()
+                .ForMember(dest => dest.EmployeeId, opt => opt.MapFrom(src => src.EmployeeId))
+                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.CustomerId))
+                .ForMember(dest => dest.UserType, opt => opt.MapFrom(src => (UserType)src.UserType))
+                .ForMember(dest => dest.Password, opt => opt.Ignore());
+
+            // UpdateLoginDTO
+            CreateMap<LoginUpdateDTO, Login>()
+                .ForMember(dest => dest.Password, opt => opt.Ignore());
+
         }
     }
 }

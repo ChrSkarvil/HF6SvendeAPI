@@ -46,7 +46,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Countries.FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Countries.FindAsync(id);
             }
             catch (Exception ex)
             {
