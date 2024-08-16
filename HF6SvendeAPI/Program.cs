@@ -47,7 +47,11 @@ builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
 // Colors
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
-
+// Orders
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
 // Add services to the container.
 builder.Services.AddControllers();

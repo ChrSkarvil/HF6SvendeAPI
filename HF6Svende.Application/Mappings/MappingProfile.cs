@@ -7,10 +7,13 @@ using AutoMapper;
 using HF6Svende.Application.DTO;
 using HF6Svende.Application.DTO.Country;
 using HF6Svende.Application.DTO.Customer;
+using HF6Svende.Application.DTO.Delivery;
 using HF6Svende.Application.DTO.Employee;
 using HF6Svende.Application.DTO.Image;
 using HF6Svende.Application.DTO.Listing;
 using HF6Svende.Application.DTO.Login;
+using HF6Svende.Application.DTO.Order;
+using HF6Svende.Application.DTO.Payment;
 using HF6Svende.Application.DTO.Product;
 using HF6SvendeAPI.Data.Entities;
 using Microsoft.AspNetCore.Http;
@@ -181,6 +184,36 @@ namespace HF6Svende.Application.Mappings
 
             // UpdateImageDTO
             CreateMap<ImageUpdateDTO, Image>();
+
+            // Orders
+            CreateMap<Order, OrderDTO>()
+                .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems))
+                .ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.Customer))
+                .ForMember(dest => dest.Payment, opt => opt.MapFrom(src => src.Payment))
+                .ForMember(dest => dest.Delivery, opt => opt.MapFrom(src => src.Delivery));
+
+            CreateMap<OrderCreateDTO, Order>()
+                .ForMember(dest => dest.OrderItems, opt => opt.Ignore());
+
+
+            // OrderItems
+            CreateMap<OrderItem, OrderItemDTO>()
+                .ForMember(dest => dest.Listing, opt => opt.MapFrom(src => src.Listing));
+
+            // OrderItemCreate
+            CreateMap<OrderItemCreateDTO, OrderItem>();
+
+            // Payments
+            CreateMap<Payment, PaymentDTO>();
+
+            // Deliveries
+            CreateMap<Delivery, DeliveryDTO>()
+                .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.PostalCode.PostCode))
+                .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Country.Name));
+
+
+
+
 
         }
 

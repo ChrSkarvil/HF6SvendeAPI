@@ -96,5 +96,18 @@ namespace HF6Svende.Infrastructure.Repository
             }
         }
 
+        public async Task SetSoldDateAsync(int listingId, DateTime soldDate)
+        {
+            var listing = await _context.Listings.FindAsync(listingId);
+            if (listing == null)
+            {
+                throw new KeyNotFoundException("Listing not found");
+            }
+
+            listing.SoldDate = soldDate;
+            _context.Listings.Update(listing);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }
