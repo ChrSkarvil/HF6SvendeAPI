@@ -33,7 +33,19 @@ namespace HF6Svende.Application.Mappings
                         Description = src.Product.Description,
                         Size = src.Product.Size,
                         CategoryId = src.Product.CategoryId,
-                        CategoryName = src.Product.Category.Name
+                        CategoryName = src.Product.Category.Name,
+                        Images = src.Product.Images.Select(image => new ImageDTO
+                        {
+                            Id = image.Id,
+                            FileBase64 = Convert.ToBase64String(image.File),
+                            CreateDate = image.CreateDate,
+                            IsVerified = image.IsVerified
+                        }).ToList(),
+                        Colors = src.Product.ProductColors.Select(pc => new ProductColorDTO
+                        {
+                            Id = pc.Color.Id,
+                            Name = pc.Color.Name
+                        }).ToList()
                     }));
 
 
@@ -55,18 +67,24 @@ namespace HF6Svende.Application.Mappings
             // Products
             CreateMap<Product, ProductDTO>()
                  .ForMember(dest => dest.Images, opt =>
-                opt.MapFrom(src => src.Images.Select(image => new ImageDto
+                opt.MapFrom(src => src.Images.Select(image => new ImageDTO
                 {
                     Id = image.Id,
                     FileBase64 = Convert.ToBase64String(image.File),
                     CreateDate = image.CreateDate,
                     IsVerified = image.IsVerified
                 }).ToList()))
-                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.Colors, opt => opt.MapFrom(src => src.ProductColors.Select(pc => new ProductColorDTO
+                {
+                    Id = pc.Id,
+                    Name = pc.Color.Name
+                })));
 
             // CreateProductDTO
             CreateMap<ProductCreateDTO, Product>()
                 .ForMember(dest => dest.Images, opt => opt.MapFrom(src => ConvertToImages(src.Images)))
+                .ForMember(dest => dest.ProductColors, opt => opt.Ignore())
                 .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId));
 
             // CreateProductDTO
@@ -131,7 +149,7 @@ namespace HF6Svende.Application.Mappings
                     src.CustomerId.HasValue && src.Customer != null
                         ? src.Customer.FirstName + " " + src.Customer.LastName
                         : src.Employee != null
-                        ? src.Employee.FirstName + " " + src.Employee.LastName 
+                        ? src.Employee.FirstName + " " + src.Employee.LastName
                         : string.Empty))
                 .ForMember(dest => dest.Role, opt => opt.MapFrom(src =>
                     src.CustomerId.HasValue
@@ -153,6 +171,7 @@ namespace HF6Svende.Application.Mappings
 
             // Images
             CreateMap<Image, ImageDTO>()
+                .ForMember(dest => dest.FileBase64, opt => opt.MapFrom(src => Convert.ToBase64String(src.File)))
                 .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId));
 
             // CreateImageDTO

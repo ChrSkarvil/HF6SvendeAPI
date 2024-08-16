@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HF6Svende.Application.DTO
 {
-    public class ImageDto
+    public class ImageDtoOLD
     {
         public int Id { get; set; }
         public string FileBase64 { get; set; } = null!;

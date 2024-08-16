@@ -43,6 +43,10 @@ builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 // Images
 builder.Services.AddScoped<IImageRepository, ImageRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
+// ProductColors
+builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
+// Colors
+builder.Services.AddScoped<IColorRepository, ColorRepository>();
 
 
 // Add services to the container.

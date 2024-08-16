@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HF6Svende.Application.DTO.Image;
 
 namespace HF6Svende.Application.DTO.Product
 {
@@ -15,6 +16,8 @@ namespace HF6Svende.Application.DTO.Product
         public string? CategoryName { get; set; } = null!;
         public int CategoryId { get; set; }
 
-        public List<ImageDto> Images { get; set; } = new List<ImageDto>();
+        public List<ImageDTO> Images { get; set; } = new List<ImageDTO>();
+        public List<ProductColorDTO> Colors { get; set; } = new List<ProductColorDTO>();
+
     }
 }

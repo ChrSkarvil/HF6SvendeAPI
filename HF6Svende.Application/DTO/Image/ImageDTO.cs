@@ -10,7 +10,7 @@ namespace HF6Svende.Application.DTO.Image
     {
         public int Id { get; set; }
 
-        public byte[] File { get; set; } = null!;
+        public string FileBase64 { get; set; } = null!;
 
         public DateTime CreateDate { get; set; }
 

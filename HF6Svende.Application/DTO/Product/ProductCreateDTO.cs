@@ -15,6 +15,7 @@ namespace HF6Svende.Application.DTO.Product
         public int CategoryId { get; set; }
 
         public List<IFormFile> Images { get; set; } = new List<IFormFile>();
+        public List<string> ColorNames { get; set; } = new List<string>();
 
     }
 }

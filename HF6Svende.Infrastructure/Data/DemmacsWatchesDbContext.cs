@@ -448,12 +448,12 @@ namespace HF6SvendeAPI.Data
                 entity.HasOne(d => d.Color)
                     .WithMany(p => p.ProductColors)
                     .HasForeignKey(d => d.ColorId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.ProductColors)
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             //ROLE

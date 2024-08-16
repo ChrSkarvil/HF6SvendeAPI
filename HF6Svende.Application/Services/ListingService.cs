@@ -9,8 +9,8 @@ using HF6Svende.Application.DTO.Product;
 using HF6Svende.Application.Service_Interfaces;
 using HF6Svende.Core.Interfaces;
 using HF6Svende.Core.Repository_Interfaces;
+using HF6Svende.Infrastructure.Repository;
 using HF6SvendeAPI.Data.Entities;
-using Microsoft.Extensions.Logging;
 
 namespace HF6Svende.Application.Services
 {
@@ -18,15 +18,15 @@ namespace HF6Svende.Application.Services
     {
         private readonly IListingRepository _listingRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
-        private readonly ILogger<ListingService> _logger;
 
 
-        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, ILogger<ListingService> logger, IMapper mapper)
+        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IMapper mapper)
         {
             _listingRepository = listingRepository;
             _productRepository = productRepository;
-            _logger = logger;
+            _colorRepository = colorRepository;
             _mapper = mapper;
         }
 
@@ -79,7 +79,8 @@ namespace HF6Svende.Application.Services
 
                 // Map the ProductCreateDTO to Product entity
                 var product = _mapper.Map<Product>(createListingDto.Product);
-                _logger.LogInformation("Creating product: {@Product}", product);
+
+                product.ProductColors = await GetProductColorsAsync(createListingDto.Product.ColorNames);
 
                 // Create the product in the repository
                 var createdProduct = await _productRepository.CreateProductAsync(product);
@@ -87,9 +88,6 @@ namespace HF6Svende.Application.Services
                 // Map the Listing entity from the ListingCreateDTO
                 var listing = _mapper.Map<Listing>(createListingDto);
                 listing.ProductId = createdProduct.Id; // Set the ProductId to the created product's ID
-
-                // Log the listing creation
-                _logger.LogInformation("Creating listing: {@Listing}", listing);
 
                 // Create the listing in the repository
                 var createdListing = await _listingRepository.CreateListingAsync(listing);
@@ -159,6 +157,26 @@ namespace HF6Svende.Application.Services
             {
                 throw new Exception("An error occurred while deleting the listing and its product.", ex);
             }
+        }
+
+        private async Task<List<ProductColor>> GetProductColorsAsync(List<string> colorNames)
+        {
+            var productColors = new List<ProductColor>();
+
+            foreach (var colorName in colorNames)
+            {
+                var color = await _colorRepository.GetColorByNameAsync(colorName);
+
+                if (color != null)
+                {
+                    productColors.Add(new ProductColor
+                    {
+                        ColorId = color.Id
+                    });
+                }
+            }
+
+            return productColors;
         }
 
     }

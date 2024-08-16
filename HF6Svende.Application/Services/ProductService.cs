@@ -16,12 +16,14 @@ namespace HF6Svende.Application.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
 
 
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public ProductService(IProductRepository productRepository, IColorRepository colorRepository, IMapper mapper)
         {
             _productRepository = productRepository;
+            _colorRepository = colorRepository;
             _mapper = mapper;
         }
         public async Task<ProductDTO> CreateProductAsync(ProductCreateDTO createProductDto)
@@ -30,6 +32,8 @@ namespace HF6Svende.Application.Services
             {
                 // Mapping dto to entity
                 var product = _mapper.Map<Product>(createProductDto);
+
+                product.ProductColors = await GetProductColorsAsync(createProductDto.ColorNames);
 
                 // Create product in repository
                 var createdProduct = await _productRepository.CreateProductAsync(product);
@@ -114,6 +118,26 @@ namespace HF6Svende.Application.Services
             {
                 throw new Exception("An error occurred while updating the product.", ex);
             }
+        }
+
+        private async Task<List<ProductColor>> GetProductColorsAsync(List<string> colorNames)
+        {
+            var productColors = new List<ProductColor>();
+
+            foreach (var colorName in colorNames)
+            {
+                var color = await _colorRepository.GetColorByNameAsync(colorName);
+
+                if (color != null)
+                {
+                    productColors.Add(new ProductColor
+                    {
+                        ColorId = color.Id
+                    });
+                }
+            }
+
+            return productColors;
         }
     }
 }
