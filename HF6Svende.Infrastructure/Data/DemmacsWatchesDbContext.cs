@@ -9,7 +9,7 @@ namespace HF6SvendeAPI.Data
         private readonly IConfiguration _config;
 
         public DemmacsWatchesDbContext()
-        { 
+        {
         }
 
         public DemmacsWatchesDbContext(DbContextOptions<DemmacsWatchesDbContext> options, IConfiguration config)
@@ -43,12 +43,63 @@ namespace HF6SvendeAPI.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(_config.GetConnectionString("localhost"));
+                optionsBuilder.UseSqlServer(_config.GetConnectionString("DemmacsWatches"));
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // INSERT DATA
+
+            // INSERT INTO COUNTRY
+            modelBuilder.Entity<Country>().HasData(
+                new Country {Id = 1, Name = "Denmark", CountryCode = "DK" },
+                new Country {Id = 2, Name = "Sweden", CountryCode = "SE" }
+                );
+
+            // INSERT INTO POSTALCODE
+            modelBuilder.Entity<PostalCode>().HasData(
+                new PostalCode {Id = 1, PostCode = "5610", City = "Assens", CountryId = 1 }
+                );
+
+            // INSERT INTO GENDER
+            modelBuilder.Entity<Gender>().HasData(
+                new Gender {Id = 1, Name = "Male"},
+                new Gender {Id = 2, Name = "Female"}
+                );
+
+            // INSERT INTO ROLE
+            modelBuilder.Entity<Role>().HasData(
+                new Role {Id = 1, Name = "Admin" }
+                );
+
+            // INSERT INTO CATEGORY
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Watches", GenderId = 1 }
+                );
+
+            // INSERT INTO CUSTOMER
+            modelBuilder.Entity<Customer>().HasData(
+                new Customer {Id = 1, FirstName = "Christian", LastName = "Skarvil", Address = "Mimose 7", Phone = 32102918, Email = "cs@live.dk", PostalCodeId = 1, CountryId = 1 }
+                );
+
+            // INSERT INTO PAYMENT
+            modelBuilder.Entity<Payment>().HasData(
+                new Payment {Id = 1, Method = "Card", Amount = 1000, CustomerId = 1 }
+                );
+
+            // INSERT INTO Delivery
+            modelBuilder.Entity<Delivery>().HasData(
+                new Delivery {Id = 1, Address = "gogade 22", 
+                    DispatchedDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc), 
+                    EstDeliveryDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc),
+                    DeliveredDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc),
+                    DeliveryFee = 30,
+                    CountryId = 1,
+                    PostalCodeId = 1}
+                );
+
+
             //CART
             modelBuilder.Entity<Cart>(entity =>
             {

@@ -287,3 +287,5 @@ C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\HF6SvendeAP
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\HF6SvendeAPI.genruntimeconfig.cache
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\obj\Debug\net8.0\ref\HF6SvendeAPI.dll
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6SvendeAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

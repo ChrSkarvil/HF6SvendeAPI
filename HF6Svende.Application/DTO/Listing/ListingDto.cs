@@ -12,7 +12,7 @@ namespace HF6Svende.Application.DTO.Listing
         public int Id { get; set; }
         public string Title { get; set; } = null!;
         public decimal Price { get; set; }
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         public DateTime? ExpireDate { get; set; }
         public DateTime? SoldDate { get; set; }
         public bool IsActive { get; set; }

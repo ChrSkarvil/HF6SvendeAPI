@@ -11,8 +11,7 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [Column(TypeName = "VARBINARY(MAX)")]
         public byte[] File { get; set; } = null!;
-        [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         [Required]
         public bool IsVerified { get; set; }
         [ForeignKey(nameof(Product))]

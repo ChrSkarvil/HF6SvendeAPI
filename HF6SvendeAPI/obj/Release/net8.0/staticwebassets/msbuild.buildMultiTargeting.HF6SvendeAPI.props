@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HF6SvendeAPI.props" />
+</Project>

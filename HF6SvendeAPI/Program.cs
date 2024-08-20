@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using HF6Svende.Application.Mappings;
 using HF6Svende.Core.Repository_Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,17 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Get connection string
 builder.Services.AddDbContext<DemmacsWatchesDbContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("localhost")));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("DemmacsWatches")));
 
+//var clientId = builder.Configuration["AzureAd:ClientId"];
+//var clientSecret = builder.Configuration["AzureAd:ClientSecret"];
+//var tenantId = builder.Configuration["AzureAd:TenantId"];
+
+//builder.Services.AddScoped<ITokenService>(provider =>
+//    new TokenService(clientId, clientSecret, tenantId));
+
+// Add services to the container.
+builder.Services.AddControllers();
 // Add references
 // Listings
 builder.Services.AddScoped<IListingRepository, ListingRepository>();
@@ -53,19 +65,52 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
-// Add services to the container.
-builder.Services.AddControllers();
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer(options =>
+//    {
+//        options.Authority = $"{builder.Configuration["AzureAd:Instance"]}{builder.Configuration["AzureAd:TenantId"]}";
+//        options.Audience = builder.Configuration["AzureAd:Audience"];
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateIssuer = true,
+//            ValidateAudience = true,
+//            ValidateLifetime = true,
+//            ValidateIssuerSigningKey = true,
+//            ValidIssuer = builder.Configuration["AzureAd:Instance"] + builder.Configuration["AzureAd:TenantId"],
+//            ValidAudience = builder.Configuration["AzureAd:Audience"]
+//        };
+//    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    //app.UseSwaggerUI();
+    app.UseSwaggerUI(s =>
+    {
+        s.SwaggerEndpoint("/swagger/v1/swagger.json", "Dispatch API V1");
+        s.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();

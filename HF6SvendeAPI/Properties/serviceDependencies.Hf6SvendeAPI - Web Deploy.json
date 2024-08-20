@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/HF6SvendeAPIapi/apis/HF6SvendeAPI",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "ignored": "true",
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:localhost"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/Hf6SvendeAPI/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDemmacsWatches_5C05F26F1A",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/agchrsqlserv/databases/DemmacsWatchesDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DemmacsWatches",
+      "dynamicId": null
+    }
+  }
+}

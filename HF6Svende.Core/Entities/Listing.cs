@@ -20,8 +20,7 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Price { get; set; }
-        [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         public DateTime? ExpireDate { get; set; }
         public DateTime? SoldDate { get; set; }
         [Required]

@@ -12,7 +12,7 @@ namespace HF6Svende.Application.DTO.Image
 
         public string FileBase64 { get; set; } = null!;
 
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         public bool IsVerified { get; set; }
 
