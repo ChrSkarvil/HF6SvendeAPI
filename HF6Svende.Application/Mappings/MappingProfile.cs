@@ -161,6 +161,11 @@ namespace HF6Svende.Application.Mappings
                         ? src.Employee.Role.Name
                         : string.Empty));
 
+            // LoginAuthDTO
+            CreateMap<Login, LoginAuthDTO>()
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password));
+
             // CreateLoginDTO
             CreateMap<LoginCreateDTO, Login>()
                 .ForMember(dest => dest.EmployeeId, opt => opt.MapFrom(src => src.EmployeeId))

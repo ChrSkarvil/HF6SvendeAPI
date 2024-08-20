@@ -22,16 +22,45 @@ namespace HF6Svende.Application.Services
         private readonly ICustomerRepository _customerRepository;
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IRoleRepository _roleRepository;
+        private readonly IJwtTokenService _jwtTokenService;
         private readonly IMapper _mapper;
 
 
-        public LoginService(ILoginRepository loginRepository, ICustomerRepository customerRepository, IEmployeeRepository employeeRepository, IRoleRepository roleRepository, IMapper mapper)
+        public LoginService(ILoginRepository loginRepository, ICustomerRepository customerRepository, IEmployeeRepository employeeRepository, 
+            IRoleRepository roleRepository, IJwtTokenService jwtTokenService, IMapper mapper)
         {
             _loginRepository = loginRepository;
             _customerRepository = customerRepository;
             _employeeRepository = employeeRepository;
             _roleRepository = roleRepository;
+            _jwtTokenService = jwtTokenService;
             _mapper = mapper;
+        }
+
+        public async Task<string> AuthenticateUserAsync(LoginAuthDTO loginDto)
+        {
+            try
+            {
+                // Get the login details
+                var login = await _loginRepository.GetLoginByEmailAsync(loginDto.Email);
+
+                if (login == null || !BC.Verify(loginDto.Password, login.Password))
+                {
+                    throw new UnauthorizedAccessException("Invalid credentials.");
+                }
+
+                // Map to LoginDTO to get the role
+                var loginDtoWithRole = _mapper.Map<LoginDTO>(login);
+
+                // Generate JWT token using the role from loginDtoWithRole
+                var token = _jwtTokenService.GenerateJwtToken(loginDtoWithRole.Email, loginDtoWithRole.Role);
+
+                return token;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while authenticating the user.", ex);
+            }
         }
 
         public async Task<LoginDTO> CreateLoginAsync(LoginCreateDTO createLoginDto)
