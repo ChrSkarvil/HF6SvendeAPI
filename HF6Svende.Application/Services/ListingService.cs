@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using HF6Svende.Application.DTO.Listing;
+using HF6Svende.Application.DTO.Product;
 using HF6Svende.Application.Service_Interfaces;
 using HF6Svende.Core.Interfaces;
+using HF6Svende.Core.Repository_Interfaces;
+using HF6Svende.Infrastructure.Repository;
 using HF6SvendeAPI.Data.Entities;
 
 namespace HF6Svende.Application.Services
@@ -14,12 +17,16 @@ namespace HF6Svende.Application.Services
     public class ListingService : IListingService
     {
         private readonly IListingRepository _listingRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
 
 
-        public ListingService(IListingRepository listingRepository, IMapper mapper)
+        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IMapper mapper)
         {
             _listingRepository = listingRepository;
+            _productRepository = productRepository;
+            _colorRepository = colorRepository;
             _mapper = mapper;
         }
 
@@ -36,7 +43,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
 
         }
@@ -55,7 +62,7 @@ namespace HF6Svende.Application.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
 
         }
@@ -64,13 +71,28 @@ namespace HF6Svende.Application.Services
         {
             try
             {
-                // Mapping dto to entity
-                var listing = _mapper.Map<Listing>(createListingDto);
+                // Validate Product
+                if (createListingDto.Product == null)
+                {
+                    throw new ArgumentNullException(nameof(createListingDto.Product), "Product data must be provided.");
+                }
 
-                // Create listing in repository
+                // Map the ProductCreateDTO to Product entity
+                var product = _mapper.Map<Product>(createListingDto.Product);
+
+                product.ProductColors = await GetProductColorsAsync(createListingDto.Product.ColorNames);
+
+                // Create the product in the repository
+                var createdProduct = await _productRepository.CreateProductAsync(product);
+
+                // Map the Listing entity from the ListingCreateDTO
+                var listing = _mapper.Map<Listing>(createListingDto);
+                listing.ProductId = createdProduct.Id; // Set the ProductId to the created product's ID
+
+                // Create the listing in the repository
                 var createdListing = await _listingRepository.CreateListingAsync(listing);
 
-                // Mapping back to dto
+                // Return the mapped ListingDTO
                 return _mapper.Map<ListingDTO>(createdListing);
             }
             catch (Exception ex)
@@ -79,16 +101,13 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDTO> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
+        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
         {
             try
             {
                 // Get existing listing
                 var listing = await _listingRepository.GetListingByIdAsync(id);
-                if (listing == null)
-                {
-                    throw new Exception("Listing not found.");
-                }
+                if (listing == null) return null;
 
                 // Mapping dto to entity
                 _mapper.Map(updateListingDto, listing);
@@ -115,14 +134,49 @@ namespace HF6Svende.Application.Services
         {
             try
             {
-                //Delete listing
+                // Get the listing to get the product ID
+                var listing = await _listingRepository.GetListingByIdAsync(id);
+                if (listing == null)
+                {
+                    throw new Exception("Listing not found.");
+                }
+
+                // Delete the listing
                 var success = await _listingRepository.DeleteListingAsync(id);
+
+                // Delete the product
+                var productDeleted = await _productRepository.DeleteProductAsync(listing.ProductId);
+                if (!productDeleted)
+                {
+                    throw new Exception("Failed to delete the product.");
+                }
+
                 return success;
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while deleting the listing.", ex);
+                throw new Exception("An error occurred while deleting the listing and its product.", ex);
             }
+        }
+
+        private async Task<List<ProductColor>> GetProductColorsAsync(List<string> colorNames)
+        {
+            var productColors = new List<ProductColor>();
+
+            foreach (var colorName in colorNames)
+            {
+                var color = await _colorRepository.GetColorByNameAsync(colorName);
+
+                if (color != null)
+                {
+                    productColors.Add(new ProductColor
+                    {
+                        ColorId = color.Id
+                    });
+                }
+            }
+
+            return productColors;
         }
 
     }

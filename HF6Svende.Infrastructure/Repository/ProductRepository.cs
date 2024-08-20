@@ -26,7 +26,7 @@ namespace HF6Svende.Infrastructure.Repository
             {
                 _context.Products.Add(product);
                 await _context.SaveChangesAsync();
-                await _context.Entry(product).Reference(l => l.Customer).LoadAsync();
+                await _context.Entry(product).Reference(l => l.Category).LoadAsync();
                 return product;
             }
             catch (Exception ex)
@@ -59,11 +59,11 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Customer).ToListAsync();
+                return await _context.Products.Include(l => l.Category).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).ToListAsync();
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the products.", ex);
+                throw new Exception("An error occurred while getting the products.", ex);
             }
         }
 
@@ -71,15 +71,15 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Customer).FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Products.Include(l => l.Category).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).FirstOrDefaultAsync(l => l.Id == id);
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the product.", ex);
+                throw new Exception("An error occurred while getting the product.", ex);
             }
         }
 
-        public async Task<Product> UpdateProductAsync(Product product)
+        public async Task<Product?> UpdateProductAsync(Product product)
         {
             try
             {

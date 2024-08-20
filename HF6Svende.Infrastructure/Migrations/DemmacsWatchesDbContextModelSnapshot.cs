@@ -30,7 +30,7 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
@@ -76,6 +76,14 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("GenderId");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            GenderId = 1,
+                            Name = "Watches"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Color", b =>
@@ -117,6 +125,20 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CountryCode = "DK",
+                            Name = "Denmark"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CountryCode = "SE",
+                            Name = "Sweden"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Customer", b =>
@@ -135,7 +157,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
@@ -168,6 +190,19 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("PostalCodeId");
 
                     b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Mimose 7",
+                            CountryId = 1,
+                            Email = "cs@live.dk",
+                            FirstName = "Christian",
+                            LastName = "Skarvil",
+                            Phone = 32102918L,
+                            PostalCodeId = 1
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Delivery", b =>
@@ -208,6 +243,19 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("PostalCodeId");
 
                     b.ToTable("Deliveries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "gogade 22",
+                            CountryId = 1,
+                            DeliveredDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc),
+                            DeliveryFee = 30m,
+                            DispatchedDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc),
+                            EstDeliveryDate = new DateTime(2024, 8, 16, 10, 9, 15, 433, DateTimeKind.Utc),
+                            PostalCodeId = 1
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Department", b =>
@@ -282,8 +330,10 @@ namespace HF6Svende.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("HireDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("HireDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -331,6 +381,18 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Male"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Female"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Image", b =>
@@ -341,15 +403,14 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<byte[]>("File")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("varbinary(10)");
+                        .HasColumnType("VARBINARY(MAX)");
 
                     b.Property<bool>("IsVerified")
                         .ValueGeneratedOnAdd()
@@ -379,7 +440,7 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
@@ -419,7 +480,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("ProductId")
                         .IsUnique();
 
-                    b.ToTable("Listing");
+                    b.ToTable("Listings");
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Login", b =>
@@ -475,7 +536,7 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
@@ -543,7 +604,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(10, 2)");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
@@ -561,6 +622,15 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Payments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amount = 1000m,
+                            CustomerId = 1,
+                            Method = "Card"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.PostalCode", b =>
@@ -588,6 +658,15 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasIndex("CountryId");
 
                     b.ToTable("PostalCodes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Assens",
+                            CountryId = 1,
+                            PostCode = "5610"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Product", b =>
@@ -606,7 +685,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -659,13 +738,21 @@ namespace HF6Svende.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Name")
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Cart", b =>
@@ -799,7 +886,7 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasOne("HF6SvendeAPI.Data.Entities.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -917,15 +1004,11 @@ namespace HF6Svende.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("HF6SvendeAPI.Data.Entities.Customer", "Customer")
+                    b.HasOne("HF6SvendeAPI.Data.Entities.Customer", null)
                         .WithMany("Products")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("CustomerId");
 
                     b.Navigation("Category");
-
-                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.ProductColor", b =>
@@ -933,13 +1016,13 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.HasOne("HF6SvendeAPI.Data.Entities.Color", "Color")
                         .WithMany("ProductColors")
                         .HasForeignKey("ColorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HF6SvendeAPI.Data.Entities.Product", "Product")
                         .WithMany("ProductColors")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Color");

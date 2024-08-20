@@ -31,8 +31,7 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [StringLength(255)]
         public string Email { get; set; } = null!;
-        [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         [ForeignKey(nameof(PostalCode))]
         public int PostalCodeId { get; set; }
         [ForeignKey(nameof(Country))]

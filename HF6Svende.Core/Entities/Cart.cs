@@ -10,8 +10,7 @@ namespace HF6SvendeAPI.Data.Entities
         public int Id { get; set; }
         [Required]
         public int Quantity { get; set; }
-        [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         [ForeignKey(nameof(Listing))]
         public int ListingId { get; set; }
         [ForeignKey(nameof(Customer))]

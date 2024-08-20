@@ -13,7 +13,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<ListingDTO>> GetAllListingsAsync();
         Task<ListingDTO?> GetListingByIdAsync(int id);
         Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto);
-        Task<ListingDTO> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto);
+        Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto);
         Task<bool> DeleteListingAsync(int id);
 
     }

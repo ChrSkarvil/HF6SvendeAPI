@@ -15,7 +15,7 @@ namespace HF6SvendeAPI.Data.Entities
         public int Id { get; set; }
         [Required]
         [StringLength(50)]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         public virtual ICollection<Employee> Employees { get; set; }
 

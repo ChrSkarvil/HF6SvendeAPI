@@ -23,13 +23,10 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         [StringLength(30)]
         public string Size { get; set; } = null!;
-        [ForeignKey(nameof(Customer))]
-        public int CustomerId { get; set; }
         [ForeignKey(nameof(Category))]
         public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; } = null!;
-        public virtual Customer Customer { get; set; } = null!;
         public virtual Listing Listing { get; set; } = null!;
         public virtual ICollection<ProductColor> ProductColors { get; set; }
         public virtual ICollection<Image> Images { get; set; }

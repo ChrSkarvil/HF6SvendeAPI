@@ -13,8 +13,7 @@ namespace HF6SvendeAPI.Data.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         [Required]
         [StringLength(45)]
         public string Method { get; set; } = null!;

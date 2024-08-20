@@ -49,7 +49,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductDTO>> CreateProduct([FromBody] ProductCreateDTO createProductDto)
+        public async Task<ActionResult<ProductDTO>> CreateProduct([FromForm] ProductCreateDTO createProductDto)
         {
             try
             {

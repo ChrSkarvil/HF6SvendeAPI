@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKCTexbxgLE2Q2mc5DZAizAAAAAACAAAAAAAQZgAAAAEAACAAAACO8UFKYct2FTrYJWYfLjVe4fwb3vKmvcHaB5OZuQgqrAAAAAAOgAAAAAIAACAAAAAwVvX6yg/InE69/2wuVUIgwnNJBRYxVGQ5Io0OfTqqHCAAAABObJM+/qSQafYGCdLPQi6bjQZlLg0v3kRVc/PDzWPM2EAAAACpggwLD9tON6x1KGXAE1ZB/s7No48SXRNXcDrVFdU7s53/mkoM9dCZt+rsFtOmklxMoFO/hivuZGLyYLKbBBGf</EncryptedPassword>
+    <History>False|2024-08-19T09:15:41.5596928Z||;False|2024-08-19T11:09:22.2822196+02:00||;False|2024-08-19T11:08:29.5665893+02:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DemmacsWatches">
+      <Value>Server=tcp:agchrsqlserv.database.windows.net,1433%3bInitial Catalog=DemmacsWatchesDb%3bPersist Security Info=False%3bUser ID=agchr%3bPassword=Hf6abcABC123%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

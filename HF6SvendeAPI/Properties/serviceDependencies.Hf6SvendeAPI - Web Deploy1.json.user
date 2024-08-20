@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2024-08-19T09:18:03.2829479Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2024-08-19T09:16:30.1185331Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2024-08-19T09:16:45.1895973Z"
+    }
+  },
+  "parameters": {
+    "mssql2.resourceGroupName": {
+      "Name": "mssql2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-hf6svende"
+    },
+    "mssql2.subscriptionId": {
+      "Name": "mssql2.subscriptionId",
+      "Type": "subscription",
+      "Value": "1531f3bb-b3fc-4686-99c2-ee78a1e103e1"
+    },
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-hf6svende"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "1531f3bb-b3fc-4686-99c2-ee78a1e103e1"
+    }
+  }
+}

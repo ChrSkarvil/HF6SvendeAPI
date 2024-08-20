@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HF6Svende.Application.DTO
+namespace HF6Svende.Application.DTO.Payment
 {
-    public class ImageDto
+    public class PaymentDTO
     {
         public int Id { get; set; }
-        public string FileBase64 { get; set; } = null!;
         public DateTime CreateDate { get; set; }
-        public bool IsVerified { get; set; }
+        public string Method { get; set; } = null!;
+        public decimal Amount { get; set; }
+        public int CustomerId { get; set; }
+
     }
 }

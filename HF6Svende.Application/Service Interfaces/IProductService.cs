@@ -12,7 +12,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<ProductDTO>> GetAllProductsAsync();
         Task<ProductDTO?> GetProductByIdAsync(int id);
         Task<ProductDTO> CreateProductAsync(ProductCreateDTO createProductDto);
-        Task<ProductDTO> UpdateProductAsync(int id, ProductUpdateDTO updateProductDto);
+        Task<ProductDTO?> UpdateProductAsync(int id, ProductUpdateDTO updateProductDto);
         Task<bool> DeleteProductAsync(int id);
     }
 }

@@ -23,11 +23,20 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Listings.Include(l => l.Product).Include(l => l.Customer).ToListAsync();
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listings.", ex);
+                throw new Exception("An error occurred while getting the listings.", ex);
             }
 
         }
@@ -36,11 +45,20 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Listings.Include(l => l.Product).Include(l => l.Customer).FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .FirstOrDefaultAsync(l => l.Id == id);
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while retrieving the listing.", ex);
+                throw new Exception("An error occurred while getting the listing.", ex);
             }
         }
 
@@ -94,6 +112,19 @@ namespace HF6Svende.Infrastructure.Repository
             {
                 throw new Exception("An error occurred while deleting the listing.", ex);
             }
+        }
+
+        public async Task SetSoldDateAsync(int listingId, DateTime soldDate)
+        {
+            var listing = await _context.Listings.FindAsync(listingId);
+            if (listing == null)
+            {
+                throw new KeyNotFoundException("Listing not found");
+            }
+
+            listing.SoldDate = soldDate;
+            _context.Listings.Update(listing);
+            await _context.SaveChangesAsync();
         }
 
     }

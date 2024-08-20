@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace HF6Svende.Application.DTO.Product
 {
@@ -11,7 +12,10 @@ namespace HF6Svende.Application.DTO.Product
         public string Brand { get; set; } = null!;
         public string Description { get; set; } = null!;
         public string Size { get; set; } = null!;
-        public int CustomerId { get; set; }
         public int CategoryId { get; set; }
+
+        public List<IFormFile> Images { get; set; } = new List<IFormFile>();
+        public List<string> ColorNames { get; set; } = new List<string>();
+
     }
 }
