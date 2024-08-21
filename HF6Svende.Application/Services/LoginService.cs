@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using HF6Svende.Application.DTO;
 using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Product;
 using HF6Svende.Application.Service_Interfaces;
@@ -37,7 +38,7 @@ namespace HF6Svende.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<string> AuthenticateUserAsync(LoginAuthDTO loginDto)
+        public async Task<AuthResponse> AuthenticateUserAsync(LoginAuthDTO loginDto)
         {
             try
             {
@@ -52,10 +53,29 @@ namespace HF6Svende.Application.Services
                 // Map to LoginDTO to get the role
                 var loginDtoWithRole = _mapper.Map<LoginDTO>(login);
 
-                // Generate JWT token using the role from loginDtoWithRole
-                var token = _jwtTokenService.GenerateJwtToken(loginDtoWithRole.Email, loginDtoWithRole.Role);
+                var user = new LoginDTO
+                {
+                    Email = loginDtoWithRole.Email,
+                    FullName = loginDtoWithRole.FullName,
+                    Role = loginDtoWithRole.Role,
+                    CustomerId = login.CustomerId,
+                    EmployeeId = login.EmployeeId
+                };
 
-                return token;
+                // Generate JWT token using the role from loginDtoWithRole
+                var token = _jwtTokenService.GenerateJwtToken(
+                    loginDtoWithRole.Email, 
+                    loginDtoWithRole.Role,
+                    loginDtoWithRole.FullName,
+                    loginDtoWithRole.Id.ToString()
+                    );
+
+
+                return new AuthResponse
+                {
+                    Token = token,
+                    User = user
+                };
             }
             catch (Exception ex)
             {

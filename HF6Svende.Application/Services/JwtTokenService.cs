@@ -27,7 +27,7 @@ namespace HF6Svende.Application.Services
             _audience = configuration["JwtConfig:JwtAudience"];
         }
 
-        public string GenerateJwtToken(string email, string? role)
+        public string GenerateJwtToken(string email, string? role, string userName, string userId)
         {
             try
             {
@@ -38,7 +38,9 @@ namespace HF6Svende.Application.Services
                     Subject = new ClaimsIdentity(new[]
                     {
                         new Claim(ClaimTypes.Email, email),
-                        new Claim(ClaimTypes.Role, role ?? string.Empty)
+                        new Claim(ClaimTypes.Role, role ?? string.Empty),
+                        new Claim(ClaimTypes.Name, userName),
+                        new Claim(ClaimTypes.NameIdentifier, userId)
                     }),
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),

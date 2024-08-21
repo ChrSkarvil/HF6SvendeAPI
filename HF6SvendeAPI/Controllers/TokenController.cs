@@ -23,8 +23,8 @@ namespace HF6SvendeAPI.Controllers
 
             try
             {
-                var token = await _loginService.AuthenticateUserAsync(loginDto);
-                return Ok(new { Token = token });
+                var authResponse = await _loginService.AuthenticateUserAsync(loginDto);
+                return Ok(new { authResponse });
             }
             catch (UnauthorizedAccessException)
             {
