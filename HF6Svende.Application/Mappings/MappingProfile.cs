@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using HF6Svende.Application.DTO;
+using HF6Svende.Application.DTO.Color;
 using HF6Svende.Application.DTO.Country;
 using HF6Svende.Application.DTO.Customer;
 using HF6Svende.Application.DTO.Delivery;
@@ -115,6 +116,9 @@ namespace HF6Svende.Application.Mappings
 
             // Countries
             CreateMap<Country, CountryDTO>();
+
+            // Colors
+            CreateMap<Color, ColorDTO>();
 
             // Employees
             CreateMap<Employee, EmployeeDTO>()

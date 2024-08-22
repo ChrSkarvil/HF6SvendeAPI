@@ -21,13 +21,6 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddDbContext<DemmacsWatchesDbContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("DemmacsWatches")));
 
-//var clientId = builder.Configuration["AzureAd:ClientId"];
-//var clientSecret = builder.Configuration["AzureAd:ClientSecret"];
-//var tenantId = builder.Configuration["AzureAd:TenantId"];
-
-//builder.Services.AddScoped<ITokenService>(provider =>
-//    new TokenService(clientId, clientSecret, tenantId));
-
 // Add services to the container.
 builder.Services.AddControllers();
 // Add references
@@ -60,6 +53,7 @@ builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
 // Colors
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
+builder.Services.AddScoped<IColorService, ColorService>();
 // Orders
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();

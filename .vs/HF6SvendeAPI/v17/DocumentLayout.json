@@ -3,12 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\color\\colordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\color\\colordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\service interfaces\\icolorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\service interfaces\\icolorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\service interfaces\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\service interfaces\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\listing\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\listing\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\imagedtoold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\imagedtoold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productcolordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productcolordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\repository interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\repository interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\image\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\image\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\listing\\listingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\listing\\listingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\data\\demmacswatchesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\data\\demmacswatchesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\customer\\customerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\customer\\customerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\listingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,20 +159,8 @@
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\repository interfaces\\ilistingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\listing\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\listing\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\listing\\listingupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\listing\\listingupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\listing\\listingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\listing\\listingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,20 +183,8 @@
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\login\\logincreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\service interfaces\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,20 +195,12 @@
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\login\\loginauthdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -131,28 +223,12 @@
       "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\hf6svendeapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|solutionrelative:hf6svendeapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\data\\demmacswatchesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\data\\demmacswatchesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\image\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{231B2C64-9B53-497E-AFD3-A3840FA27535}|HF6SvendeAPI\\HF6SvendeAPI.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svendeapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,14 +267,6 @@
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\order\\ordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\imagedtoold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\imagedtoold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\image\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\image\\imagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -213,10 +281,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -241,10 +305,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\migrations\\20240815115058_productcolorfkcascade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\migrations\\20240815115058_productcolorfkcascade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\order\\orderitemcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -287,10 +347,6 @@
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\service interfaces\\iorderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -299,16 +355,8 @@
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\repository interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\repository interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\repository interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.infrastructure\\repository\\productcolorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -325,14 +373,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\repository interfaces\\iproductcolorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\repository interfaces\\iproductcolorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productcolordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productcolordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -395,14 +435,6 @@
       "RelativeMoniker": "D:0:0:{C98DD5C5-A082-4238-A48A-8D33422DD8E0}|HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj|solutionrelative:hf6svende.infrastructure\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\product\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\product\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\service interfaces\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\service interfaces\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\service interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\service interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -413,10 +445,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\login\\loginupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\login\\loginupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.application\\dto\\customer\\customerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\customer\\customerupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -471,10 +499,6 @@
       "RelativeMoniker": "D:0:0:{128B6C4C-9092-4DA3-9116-F9375D29B5C1}|HF6Svende.Application\\HF6Svende.Application.csproj|solutionrelative:hf6svende.application\\dto\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|c:\\users\\hfgf\\desktop\\hf6\\hf6svendeapi\\hf6svende.core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{290CBC93-B944-4547-9F75-FB24D3C538E9}|HF6Svende.Core\\HF6Svende.Core.csproj|solutionrelative:hf6svende.core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6SvendeAPI\\Migrations\\20240813064653_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -517,11 +541,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 51,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\OrderController.cs",
@@ -534,163 +558,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 13,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ProductController.cs",
               "RelativeToolTip": "HF6SvendeAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAwwFcAAAAAAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAwwFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-14T06:58:16.793Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
-              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
-              "ViewState": "AQIAAJwAAAAAAAAAAAAiwKwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:40:33.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IListingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
-              "RelativeToolTip": "HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:39:22.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IListingService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IListingService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IListingService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IListingService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\IListingService.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T10:01:05.384Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListingService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ListingService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ListingService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ListingService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Services\\ListingService.cs",
-              "ViewState": "AQIAAMcAAAAAAAAAAADwv+gAAAAFAAAA",
+              "Title": "ColorController.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ColorController.cs",
+              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\ColorController.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ColorController.cs",
+              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\ColorController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:59:38.136Z",
+              "WhenOpened": "2024-08-22T10:19:32.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "DocumentIndex": 7,
+              "Title": "IColorService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IColorService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IColorService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IColorService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\IColorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T07:03:33.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ILoginService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T11:58:18.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\OrderService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Services\\OrderService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAArwCIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T07:03:05.696Z",
+              "WhenOpened": "2024-08-22T10:16:16.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ListingController.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ListingController.cs",
-              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\ListingController.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ListingController.cs",
-              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\ListingController.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHMAAAAWAAAA",
+              "Title": "ColorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Color\\ColorDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Color\\ColorDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Color\\ColorDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Color\\ColorDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T09:29:15.847Z",
+              "WhenOpened": "2024-08-22T10:15:08.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:00:21.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Color.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Color.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Color.cs",
+              "RelativeToolTip": "HF6Svende.Core\\Entities\\Color.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:01:50.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountryService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\CountryService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\CountryService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\CountryService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Services\\CountryService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:15:44.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\CountryController.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\CountryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:20:23.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Program.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Program.cs",
               "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Program.cs",
               "RelativeToolTip": "HF6SvendeAPI\\Program.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAADwv44AAAAVAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T06:23:44.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ListingUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAiwHgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:47:40.762Z",
+              "WhenOpened": "2024-08-13T10:38:00.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ListingCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAzAAAA",
+              "DocumentIndex": 5,
+              "Title": "ColorService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ColorService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ColorService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ColorService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Services\\ColorService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T10:09:58.988Z",
+              "WhenOpened": "2024-08-22T10:17:39.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ListingDto.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingDto.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ListingDto.cs",
@@ -703,7 +715,371 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T07:27:25.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICountryService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:15:25.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ColorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwDAAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:17:38.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Services\\ProductService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:16:32.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ImageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:20:58.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ImageDtoOLD.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:24:28.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:17:11.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:20:23.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductColorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T12:06:07.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ListingService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ListingService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ListingService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ListingService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Services\\ListingService.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAUwEoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:59:38.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAwwEoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:14:53.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:14:42.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ImageCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:21:08.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T06:20:29.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ListingCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Listing\\ListingCreateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T10:09:58.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20240822080611_ImageVerifiedDefaultTrue.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Migrations\\20240822080611_ImageVerifiedDefaultTrue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:06:12.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20240822080448_ImageVerifiedDefaultTrue.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Migrations\\20240822080448_ImageVerifiedDefaultTrue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:04:48.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CustomerUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T07:28:59.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ListingController.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ListingController.cs",
+              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\ListingController.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ListingController.cs",
+              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\ListingController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T09:29:15.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DemmacsWatchesDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
+              "ViewState": "AQIAACUBAAAAAAAAAAAiwEYBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:02:36.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Image.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Image.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Image.cs",
+              "RelativeToolTip": "HF6Svende.Core\\Entities\\Image.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:22:48.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Services\\OrderService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAArwCIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T07:03:05.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ILoginService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\ILoginService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T11:58:18.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\IOrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T07:03:33.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IListingService.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IListingService.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IListingService.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IListingService.cs",
+              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\IListingService.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T10:01:05.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IListingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
+              "RelativeToolTip": "HF6Svende.Core\\Repository Interfaces\\IListingRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:39:22.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ListingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
+              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ListingRepository.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAiwKwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T08:40:33.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ListingUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
+              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
+              "RelativeToolTip": "HF6Svende.Application\\DTO\\Listing\\ListingUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T11:47:40.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "TokenController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\TokenController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\TokenController.cs",
@@ -716,7 +1092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 42,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\LoginService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\LoginService.cs",
@@ -729,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 43,
               "Title": "CustomerCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerCreateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Customer\\CustomerCreateDTO.cs",
@@ -742,19 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Login\\LoginDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T12:00:21.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 45,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\LoginController.cs",
@@ -766,19 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\CustomerController.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T07:27:25.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 40,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\JwtTokenService.cs",
@@ -791,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 46,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IJwtTokenService.cs",
@@ -803,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 44,
               "Title": "LoginCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginCreateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Login\\LoginCreateDTO.cs",
@@ -815,19 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Mappings\\MappingProfile.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAADgv6YAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T10:38:00.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 48,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\OrderRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\OrderRepository.cs",
@@ -839,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 47,
               "Title": "LoginAuthDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginAuthDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Login\\LoginAuthDTO.cs",
@@ -851,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 49,
               "Title": "CustomerRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\CustomerRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\CustomerRepository.cs",
@@ -863,19 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CountryController.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CountryController.cs",
-              "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\CountryController.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\CountryController.cs",
-              "RelativeToolTip": "HF6SvendeAPI\\Controllers\\CountryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T10:20:23.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 50,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\appsettings.json",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\appsettings.json",
@@ -887,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 52,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\ILoginRepository.cs",
@@ -899,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 53,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IProductService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IProductService.cs",
@@ -911,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 54,
               "Title": "HF6SvendeAPI.http",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\HF6SvendeAPI.http",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\HF6SvendeAPI.http",
@@ -923,20 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ProductService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Services\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:16:32.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 55,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\appsettings.Development.json",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\appsettings.Development.json",
@@ -948,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 132,
               "Title": "20240820082629_HireDateAllowNull.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240820082629_HireDateAllowNull.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240820082629_HireDateAllowNull.cs",
@@ -960,31 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ProductDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:17:11.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DemmacsWatchesDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
-              "RelativeToolTip": "HF6Svende.Infrastructure\\Data\\DemmacsWatchesDbContext.cs",
-              "ViewState": "AQIAAPwAAAAAAAAAAAAiwBABAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:02:36.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 56,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Employee.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Employee.cs",
@@ -996,19 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ImageDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Image\\ImageDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T09:20:58.899Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 59,
               "Title": "HF6Svende.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
@@ -1020,7 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 57,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\WeatherForecast.cs",
@@ -1032,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 65,
               "Title": "OrderCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Order\\OrderCreateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Order\\OrderCreateDTO.cs",
@@ -1044,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 60,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Properties\\launchSettings.json",
@@ -1056,7 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 58,
               "Title": "HF6Svende.Core.csproj",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj",
               "RelativeDocumentMoniker": "HF6Svende.Core\\HF6Svende.Core.csproj",
@@ -1068,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 63,
               "Title": "CustomerDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Customer\\CustomerDTO.cs",
@@ -1080,7 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 62,
               "Title": "20240819090457_allowNullCreateDate.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240819090457_allowNullCreateDate.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240819090457_allowNullCreateDate.cs",
@@ -1092,7 +1371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 64,
               "Title": "HF6Svende.Application.csproj",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
               "RelativeDocumentMoniker": "HF6Svende.Application\\HF6Svende.Application.csproj",
@@ -1104,7 +1383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 61,
               "Title": "20240819085411_DBSeedValues.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240819085411_DBSeedValues.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240819085411_DBSeedValues.cs",
@@ -1116,31 +1395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ImageDtoOLD.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\ImageDtoOLD.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:24:28.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ImageCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Image\\ImageCreateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T09:21:08.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 66,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Customer.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Customer.cs",
@@ -1152,7 +1407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 67,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Payment.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Payment.cs",
@@ -1164,7 +1419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 68,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Order.cs",
@@ -1176,7 +1431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 69,
               "Title": "Listing.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Listing.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Listing.cs",
@@ -1188,19 +1443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Image.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Image.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Image.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Image.cs",
-              "RelativeToolTip": "HF6Svende.Core\\Entities\\Image.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:22:48.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 70,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Cart.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Cart.cs",
@@ -1212,7 +1455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 71,
               "Title": "Delivery.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Delivery.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Delivery.cs",
@@ -1224,7 +1467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 72,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Category.cs",
@@ -1236,7 +1479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 131,
               "Title": "20240819083003_CreateDateAllowNull.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240819083003_CreateDateAllowNull.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240819083003_CreateDateAllowNull.cs",
@@ -1248,7 +1491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 73,
               "Title": "20240813081650_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240813081650_InitialMigration.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240813081650_InitialMigration.cs",
@@ -1260,7 +1503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 74,
               "Title": "20240819081835_AzureDBTest.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240819081835_AzureDBTest.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240819081835_AzureDBTest.cs",
@@ -1272,7 +1515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 75,
               "Title": "20240815115058_ProductColorFKCascade.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240815115058_ProductColorFKCascade.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240815115058_ProductColorFKCascade.cs",
@@ -1284,7 +1527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 77,
               "Title": "OrderItemDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Order\\OrderItemDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Order\\OrderItemDTO.cs",
@@ -1296,19 +1539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
-              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ProductRepository.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwEoAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:14:53.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 76,
               "Title": "OrderItemCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Order\\OrderItemCreateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Order\\OrderItemCreateDTO.cs",
@@ -1320,7 +1551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 78,
               "Title": "OrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Order\\OrderDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Order\\OrderDTO.cs",
@@ -1332,7 +1563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 79,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\CustomerService.cs",
@@ -1344,7 +1575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 80,
               "Title": "OrderItemService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\OrderItemService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\OrderItemService.cs",
@@ -1356,7 +1587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 82,
               "Title": "PaymentDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Payment\\PaymentDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Payment\\PaymentDTO.cs",
@@ -1368,7 +1599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 81,
               "Title": "DeliveryDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Delivery\\DeliveryDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Delivery\\DeliveryDTO.cs",
@@ -1380,7 +1611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 83,
               "Title": "OrderItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\OrderItemRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\OrderItemRepository.cs",
@@ -1392,7 +1623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 84,
               "Title": "IOrderItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IOrderItemRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IOrderItemRepository.cs",
@@ -1404,7 +1635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 85,
               "Title": "IOrderItemService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IOrderItemService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IOrderItemService.cs",
@@ -1416,19 +1647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "CountryService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\CountryService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\CountryService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\CountryService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Services\\CountryService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAABRwCUAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T10:15:44.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 86,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\EmployeeService.cs",
@@ -1440,7 +1659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 87,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IOrderRepository.cs",
@@ -1452,19 +1671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
-              "RelativeToolTip": "HF6Svende.Core\\Repository Interfaces\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:14:42.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 89,
               "Title": "ProductColorRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ProductColorRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ProductColorRepository.cs",
@@ -1476,19 +1683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "ColorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
-              "RelativeToolTip": "HF6Svende.Infrastructure\\Repository\\ColorRepository.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAIwDAAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:17:38.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 88,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\OrderItem.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\OrderItem.cs",
@@ -1500,7 +1695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 90,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\RoleRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\RoleRepository.cs",
@@ -1512,7 +1707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 92,
               "Title": "IProductColorRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IProductColorRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IProductColorRepository.cs",
@@ -1524,7 +1719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 91,
               "Title": "IColorRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IColorRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IColorRepository.cs",
@@ -1536,31 +1731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "ProductCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductCreateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:20:23.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "ProductColorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductColorDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T12:06:07.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 93,
               "Title": "ImageService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Services\\ImageService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Services\\ImageService.cs",
@@ -1573,7 +1744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 94,
               "Title": "ImageController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\ImageController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\ImageController.cs",
@@ -1585,7 +1756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 95,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Product.cs",
@@ -1597,7 +1768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 96,
               "Title": "ProductColor.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\ProductColor.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\ProductColor.cs",
@@ -1609,7 +1780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 98,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\LoginRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\LoginRepository.cs",
@@ -1621,7 +1792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 99,
               "Title": "PostalCodeRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\PostalCodeRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\PostalCodeRepository.cs",
@@ -1633,7 +1804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 97,
               "Title": "ImageRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\ImageRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\ImageRepository.cs",
@@ -1645,7 +1816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 100,
               "Title": "IRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IRoleRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IRoleRepository.cs",
@@ -1657,7 +1828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 101,
               "Title": "IPostalCodeRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IPostalCodeRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IPostalCodeRepository.cs",
@@ -1669,7 +1840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 127,
               "Title": "20240815112348_ProductImageFKCascade.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240815112348_ProductImageFKCascade.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240815112348_ProductImageFKCascade.cs",
@@ -1681,7 +1852,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 102,
               "Title": "ProductInListingDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Listing\\ProductInListingDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Listing\\ProductInListingDTO.cs",
@@ -1693,7 +1864,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 103,
               "Title": "ImageUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Image\\ImageUpdateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Image\\ImageUpdateDTO.cs",
@@ -1705,7 +1876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 128,
               "Title": "20240815103616_ImageFileFix.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240815103616_ImageFileFix.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240815103616_ImageFileFix.cs",
@@ -1717,7 +1888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 129,
               "Title": "20240815103744_ImageFileUpdateType.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240815103744_ImageFileUpdateType.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240815103744_ImageFileUpdateType.cs",
@@ -1729,7 +1900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 104,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6SvendeAPI\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "HF6SvendeAPI\\Controllers\\EmployeeController.cs",
@@ -1741,7 +1912,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 105,
               "Title": "IImageService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IImageService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IImageService.cs",
@@ -1753,7 +1924,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 107,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\EmployeeRepository.cs",
@@ -1765,7 +1936,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 106,
               "Title": "IImageRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IImageRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IImageRepository.cs",
@@ -1777,7 +1948,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 130,
               "Title": "20240815081456_RemoveCustomerFKFromProduct.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240815081456_RemoveCustomerFKFromProduct.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240815081456_RemoveCustomerFKFromProduct.cs",
@@ -1789,31 +1960,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
-              "Title": "ProductUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Product\\ProductUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T06:20:29.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 99,
-              "Title": "ICountryService.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
-              "RelativeToolTip": "HF6Svende.Application\\Service Interfaces\\ICountryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T10:15:25.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 108,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\ICustomerService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\ICustomerService.cs",
@@ -1825,7 +1972,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 109,
               "Title": "IEmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\Service Interfaces\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\Service Interfaces\\IEmployeeService.cs",
@@ -1837,19 +1984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
-              "Title": "CustomerUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
-              "RelativeToolTip": "HF6Svende.Application\\DTO\\Customer\\CustomerUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T07:28:59.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 110,
               "Title": "LoginUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Login\\LoginUpdateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Login\\LoginUpdateDTO.cs",
@@ -1861,7 +1996,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 111,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Login.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Login.cs",
@@ -1873,7 +2008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 112,
               "Title": "CountryRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Repository\\CountryRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Repository\\CountryRepository.cs",
@@ -1885,7 +2020,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 113,
               "Title": "ICustomerRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\ICustomerRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\ICustomerRepository.cs",
@@ -1897,7 +2032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 114,
               "Title": "EmployeeDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Employee\\EmployeeDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Employee\\EmployeeDTO.cs",
@@ -1909,7 +2044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 116,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Role.cs",
@@ -1921,7 +2056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 115,
               "Title": "ICountryRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\ICountryRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\ICountryRepository.cs",
@@ -1933,7 +2068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 126,
               "Title": "20240814112930_RoleNameToString.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240814112930_RoleNameToString.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240814112930_RoleNameToString.cs",
@@ -1945,7 +2080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 117,
               "Title": "EmployeeUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Employee\\EmployeeUpdateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Employee\\EmployeeUpdateDTO.cs",
@@ -1957,7 +2092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 118,
               "Title": "EmployeeCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Employee\\EmployeeCreateDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Employee\\EmployeeCreateDTO.cs",
@@ -1969,7 +2104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 119,
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Repository Interfaces\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Repository Interfaces\\IEmployeeRepository.cs",
@@ -1981,7 +2116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 120,
               "Title": "CountryDTO.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Country\\CountryDTO.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Country\\CountryDTO.cs",
@@ -1993,7 +2128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 121,
               "Title": "Country.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Country.cs",
               "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Country.cs",
@@ -2005,7 +2140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 122,
               "Title": "CustomerDto.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\CustomerDto.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\CustomerDto.cs",
@@ -2017,7 +2152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 123,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\DTO\\Category.cs",
               "RelativeDocumentMoniker": "HF6Svende.Application\\DTO\\Category.cs",
@@ -2029,7 +2164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 125,
               "Title": "20240813083105_ProductChange.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\Migrations\\20240813083105_ProductChange.cs",
               "RelativeDocumentMoniker": "HF6Svende.Infrastructure\\Migrations\\20240813083105_ProductChange.cs",
@@ -2041,19 +2176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
-              "Title": "Color.cs",
-              "DocumentMoniker": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Color.cs",
-              "RelativeDocumentMoniker": "HF6Svende.Core\\Entities\\Color.cs",
-              "ToolTip": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\Entities\\Color.cs",
-              "RelativeToolTip": "HF6Svende.Core\\Entities\\Color.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T08:01:50.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 124,
               "Title": "20240813064653_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\HFGF\\source\\repos\\HF6SvendeAPI\\HF6SvendeAPI\\Migrations\\20240813064653_InitialMigration.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\HF6SvendeAPI\\HF6SvendeAPI\\Migrations\\20240813064653_InitialMigration.cs",
