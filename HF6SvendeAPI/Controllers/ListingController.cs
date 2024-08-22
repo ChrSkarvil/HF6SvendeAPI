@@ -29,6 +29,34 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpGet("verified")]
+        public async Task<IActionResult> GetVerifiedListings()
+        {
+            try
+            {
+                var listings = await _listingService.GetAllVerifiedListingsAsync();
+                return Ok(listings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("unverified")]
+        public async Task<IActionResult> GetUnverifiedListings()
+        {
+            try
+            {
+                var listings = await _listingService.GetAllUnverifiedListingsAsync();
+                return Ok(listings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetListingById(int id)
         {
@@ -82,6 +110,32 @@ namespace HF6SvendeAPI.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/{verified}")]
+        public async Task<IActionResult> SetListingVerified(int id, bool verified)
+        {
+            try
+            {
+                // Call the service method to update the listing's verification status
+                bool isUpdated = await _listingService.SetListingVerifiedAsync(id, verified);
+
+                if (isUpdated)
+                {
+                    // Return 200 OK if the update was successful
+                    return Ok(new { Success = true });
+                }
+                else
+                {
+                    // Return 404 Not Found if the listing was not found
+                    return NotFound(new { Success = false, Message = "Listing not found." });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Return a 500 Internal Server Error with a generic error message
+                return StatusCode(500, new { Success = false, Message = "An error occurred while updating the listing.", Details = ex.Message });
             }
         }
 

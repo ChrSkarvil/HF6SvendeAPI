@@ -127,5 +127,61 @@ namespace HF6Svende.Infrastructure.Repository
             await _context.SaveChangesAsync();
         }
 
+        public async Task<List<Listing>> GetAllVerifiedListingsAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .Where(l => l.IsListingVerified == true)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listings.", ex);
+            }
+        }
+
+        public async Task<List<Listing>> GetAllUnverifiedListingsAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .Where(l => l.IsListingVerified == false)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listings.", ex);
+            }
+        }
+
+        public async Task SetListingVerifiedAsync(int listingId, bool verified)
+        {
+            var listing = await _context.Listings.FindAsync(listingId);
+            if (listing == null)
+            {
+                throw new KeyNotFoundException("Listing not found");
+            }
+
+            listing.IsListingVerified = verified;
+            _context.Listings.Update(listing);
+            await _context.SaveChangesAsync();
+        }
     }
 }

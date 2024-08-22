@@ -179,5 +179,56 @@ namespace HF6Svende.Application.Services
             return productColors;
         }
 
+        public async Task<List<ListingDTO>> GetAllVerifiedListingsAsync()
+        {
+            try
+            {
+                // Get all verified listings
+                var listings = await _listingRepository.GetAllVerifiedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<List<ListingDTO>> GetAllUnverifiedListingsAsync()
+        {
+            try
+            {
+                // Get all unverified listings
+                var listings = await _listingRepository.GetAllUnverifiedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<bool> SetListingVerifiedAsync(int listingId, bool verified)
+        {
+            try
+            {
+                await _listingRepository.SetListingVerifiedAsync(listingId, verified);
+                return true;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false; 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while updating the listing.", ex);
+            }
+            
+        }
     }
 }
