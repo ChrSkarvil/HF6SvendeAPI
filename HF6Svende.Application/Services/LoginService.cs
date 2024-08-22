@@ -77,6 +77,10 @@ namespace HF6Svende.Application.Services
                     User = user
                 };
             }
+            catch (UnauthorizedAccessException)
+            {
+                throw;
+            }
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while authenticating the user.", ex);

@@ -30,9 +30,9 @@ namespace HF6SvendeAPI.Controllers
             {
                 return Unauthorized(new { Message = "Invalid credentials." });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return StatusCode(500, ex);
+                return StatusCode(500, new { Message = "An error occurred while processing your request." });
             }
         }
 
