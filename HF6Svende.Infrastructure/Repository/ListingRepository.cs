@@ -26,6 +26,7 @@ namespace HF6Svende.Infrastructure.Repository
                 return await _context.Listings
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Images)
                     .Include(l => l.Product)
@@ -48,6 +49,7 @@ namespace HF6Svende.Infrastructure.Repository
                 return await _context.Listings
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Images)
                     .Include(l => l.Product)
@@ -134,6 +136,7 @@ namespace HF6Svende.Infrastructure.Repository
                 return await _context.Listings
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Images)
                     .Include(l => l.Product)
@@ -156,6 +159,7 @@ namespace HF6Svende.Infrastructure.Repository
                 return await _context.Listings
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
                     .Include(l => l.Product)
                         .ThenInclude(p => p.Images)
                     .Include(l => l.Product)

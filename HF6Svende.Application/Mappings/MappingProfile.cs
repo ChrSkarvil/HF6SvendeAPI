@@ -38,6 +38,7 @@ namespace HF6Svende.Application.Mappings
                         Size = src.Product.Size,
                         CategoryId = src.Product.CategoryId,
                         CategoryName = src.Product.Category.Name,
+                        Gender = src.Product.Category.Gender.Name,
                         Images = src.Product.Images.Select(image => new ImageDTO
                         {
                             Id = image.Id,
@@ -79,6 +80,7 @@ namespace HF6Svende.Application.Mappings
                     IsVerified = image.IsVerified
                 }).ToList()))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Category.Gender.Name))
                 .ForMember(dest => dest.Colors, opt => opt.MapFrom(src => src.ProductColors.Select(pc => new ProductColorDTO
                 {
                     Id = pc.Id,
