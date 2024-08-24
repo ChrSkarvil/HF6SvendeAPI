@@ -1,6 +1,8 @@
 ﻿using HF6Svende.Application.DTO.Listing;
 using HF6Svende.Application.Service_Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace HF6SvendeAPI.Controllers
 {
@@ -95,11 +97,23 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateListing(int id, [FromBody] ListingUpdateDTO updateListingDto)
+        public async Task<IActionResult> UpdateListing(int id, [FromForm] ListingUpdateDTO updateListingDto)
         {
             try
             {
-                var updatedListing = await _listingService.UpdateListingAsync(id, updateListingDto);
+                //var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                //if (userIdClaim == null)
+                //{
+                //    return Unauthorized("User ID not found in token.");
+                //}
+
+                //int customerId = int.Parse(userIdClaim.Value);
+
+                //var roleClaim = User.FindFirst(ClaimTypes.Role);
+                //string role = roleClaim?.Value ?? string.Empty;
+
+
+                var updatedListing = await _listingService.UpdateListingAsync(id, updateListingDto/*, customerId, role*/);
                 if (updatedListing == null)
                 {
                     return NotFound("Listing not found.");
@@ -114,6 +128,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPut("{id}/{verified}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SetListingVerified(int id, bool verified)
         {
             try

@@ -11,6 +11,7 @@ using HF6Svende.Core.Interfaces;
 using HF6Svende.Core.Repository_Interfaces;
 using HF6Svende.Infrastructure.Repository;
 using HF6SvendeAPI.Data.Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace HF6Svende.Application.Services
 {
@@ -19,14 +20,16 @@ namespace HF6Svende.Application.Services
         private readonly IListingRepository _listingRepository;
         private readonly IProductRepository _productRepository;
         private readonly IColorRepository _colorRepository;
+        private readonly IImageRepository _imageRepository;
         private readonly IMapper _mapper;
 
 
-        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IMapper mapper)
+        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IImageRepository imageRepository, IMapper mapper)
         {
             _listingRepository = listingRepository;
             _productRepository = productRepository;
             _colorRepository = colorRepository;
+            _imageRepository = imageRepository;
             _mapper = mapper;
         }
 
@@ -101,13 +104,19 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
+        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto/*,*/ /*int customerId, string role*/)
         {
             try
             {
                 // Get existing listing
                 var listing = await _listingRepository.GetListingByIdAsync(id);
                 if (listing == null) return null;
+
+                // Check if the user is an admin or if they own the listing
+                //if (role.ToLower() != "admin" && listing.CustomerId != customerId)
+                //{
+                //    return null; // Not authorized to update the listing
+                //}
 
                 // Mapping dto to entity
                 _mapper.Map(updateListingDto, listing);
@@ -117,6 +126,34 @@ namespace HF6Svende.Application.Services
                 listing.Product.Description = updateListingDto.Description;
                 listing.Product.Size = updateListingDto.Size;
 
+                // Handle colors
+                var colors = await GetProductColorsAsync(updateListingDto.ColorNames);
+                listing.Product.ProductColors = colors;
+
+                // Handle image updates
+                if (updateListingDto.NewImages.Any())
+                {
+                    var images = updateListingDto.NewImages.Select(file => new Image
+                    {
+                        File = ConvertToBytes(file),
+                        CreateDate = DateTime.UtcNow,
+                        IsVerified = true,
+                        ProductId = listing.Product.Id
+                    }).ToList();
+
+                    foreach (var image in images)
+                    {
+                        await _imageRepository.CreateImageAsync(image);
+                    }
+                }
+
+                if (updateListingDto.ImageIdsToRemove.Any())
+                {
+                    foreach (var imageId in updateListingDto.ImageIdsToRemove)
+                    {
+                        await _imageRepository.DeleteImageAsync(imageId);
+                    }
+                }
 
                 // Save the changes in the repository
                 var updatedListing = await _listingRepository.UpdateListingAsync(listing);
@@ -230,5 +267,15 @@ namespace HF6Svende.Application.Services
             }
             
         }
+
+        private byte[] ConvertToBytes(IFormFile file)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+            }
+        }
+
     }
 }

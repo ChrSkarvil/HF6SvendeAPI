@@ -85,6 +85,8 @@ namespace HF6Svende.Infrastructure.Repository
             try
             {
                 _context.Listings.Update(listing);
+
+                //Update product
                 _context.Entry(listing.Product).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 return listing;
