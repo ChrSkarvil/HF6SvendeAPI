@@ -101,25 +101,30 @@ namespace HF6SvendeAPI.Controllers
         {
             try
             {
-                //var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-                //if (userIdClaim == null)
-                //{
-                //    return Unauthorized("User ID not found in token.");
-                //}
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
 
-                //int customerId = int.Parse(userIdClaim.Value);
+                var roleClaim = User.FindFirst(ClaimTypes.Role);
+                string role = roleClaim?.Value ?? string.Empty;
 
-                //var roleClaim = User.FindFirst(ClaimTypes.Role);
-                //string role = roleClaim?.Value ?? string.Empty;
+                var customerIdClaim = User.FindFirst("CustomerId");
+                int? customerId = customerIdClaim != null ? int.Parse(customerIdClaim.Value) : (int?)null;
 
 
-                var updatedListing = await _listingService.UpdateListingAsync(id, updateListingDto/*, customerId, role*/);
+                var updatedListing = await _listingService.UpdateListingAsync(id, updateListingDto, customerId, role);
                 if (updatedListing == null)
                 {
                     return NotFound("Listing not found.");
                 }
 
                 return Ok(updatedListing);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized(new { Message = "User is not authorized to update the listing." });
             }
             catch (Exception ex)
             {

@@ -10,7 +10,7 @@ namespace HF6Svende.Application.Service_Interfaces
 {
     public interface IJwtTokenService
     {
-        string GenerateJwtToken(string email, string? role, string userName, string userId);
+        string GenerateJwtToken(string email, string? role, string userName, string userId, int? customerId);
         ClaimsPrincipal? ValidateToken(string token);
 
     }

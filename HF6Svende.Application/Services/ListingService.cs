@@ -104,7 +104,7 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto/*,*/ /*int customerId, string role*/)
+        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto, int? customerId, string role)
         {
             try
             {
@@ -113,10 +113,10 @@ namespace HF6Svende.Application.Services
                 if (listing == null) return null;
 
                 // Check if the user is an admin or if they own the listing
-                //if (role.ToLower() != "admin" && listing.CustomerId != customerId)
-                //{
-                //    return null; // Not authorized to update the listing
-                //}
+                if (role.ToLower() != "admin" && listing.CustomerId != customerId)
+                {
+                    throw new UnauthorizedAccessException("User is not authorized to update the listing.");
+                }
 
                 // Mapping dto to entity
                 _mapper.Map(updateListingDto, listing);
@@ -160,6 +160,10 @@ namespace HF6Svende.Application.Services
 
                 // Mapping back to dto
                 return _mapper.Map<ListingDTO>(updatedListing);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                throw;
             }
             catch (Exception ex)
             {

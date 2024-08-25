@@ -27,21 +27,29 @@ namespace HF6Svende.Application.Services
             _audience = configuration["JwtConfig:JwtAudience"];
         }
 
-        public string GenerateJwtToken(string email, string? role, string userName, string userId)
+        public string GenerateJwtToken(string email, string? role, string userName, string userId, int? customerId)
         {
             try
             {
                 var key = Encoding.ASCII.GetBytes(_secretKey);
                 var tokenHandler = new JwtSecurityTokenHandler();
+
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Email, email),
+                    new Claim(ClaimTypes.Role, role ?? string.Empty),
+                    new Claim(ClaimTypes.Name, userName),
+                    new Claim(ClaimTypes.NameIdentifier, userId)
+                };
+
+                if (customerId.HasValue)
+                {
+                    claims.Add(new Claim("CustomerId", customerId.Value.ToString()));
+                }
+
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new[]
-                    {
-                        new Claim(ClaimTypes.Email, email),
-                        new Claim(ClaimTypes.Role, role ?? string.Empty),
-                        new Claim(ClaimTypes.Name, userName),
-                        new Claim(ClaimTypes.NameIdentifier, userId)
-                    }),
+                    Subject = new ClaimsIdentity(claims),
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                     Issuer = _issuer,

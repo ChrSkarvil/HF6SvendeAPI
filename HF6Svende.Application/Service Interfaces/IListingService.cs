@@ -14,7 +14,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<ListingDTO>> GetAllListingsAsync();
         Task<ListingDTO?> GetListingByIdAsync(int id);
         Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto);
-        Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto/*, int customerId, string role*/);
+        Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto, int? customerId, string role);
         Task<bool> DeleteListingAsync(int id);
 
         Task<List<ListingDTO>> GetAllVerifiedListingsAsync();

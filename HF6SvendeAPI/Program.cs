@@ -143,12 +143,12 @@ app.UseCors("AllowAll");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
-    //app.UseSwaggerUI(s =>
-    //{
-    //    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Dispatch API V1");
-    //    s.RoutePrefix = string.Empty;
-    //});
+    //app.UseSwaggerUI();
+    app.UseSwaggerUI(s =>
+    {
+        s.SwaggerEndpoint("/swagger/v1/swagger.json", "Dispatch API V1");
+        s.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();

@@ -67,7 +67,8 @@ namespace HF6Svende.Application.Services
                     loginDtoWithRole.Email, 
                     loginDtoWithRole.Role,
                     loginDtoWithRole.FullName,
-                    loginDtoWithRole.Id.ToString()
+                    loginDtoWithRole.Id.ToString(),
+                    login.CustomerId
                     );
 
 
