@@ -59,6 +59,20 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpGet("denied")]
+        public async Task<IActionResult> GetDeniedListings()
+        {
+            try
+            {
+                var listings = await _listingService.GetAllDeniedListingsAsync();
+                return Ok(listings);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetListingById(int id)
         {
@@ -77,12 +91,44 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpGet("customer/{customerId}")]
+        public async Task<IActionResult> GetListingByCustomerId(int customerId)
+        {
+            try
+            {
+                var listing = await _listingService.GetListingsByCustomerIdAsync(customerId);
+                if (listing == null)
+                {
+                    return NotFound("Listing not found.");
+                }
+                return Ok(listing);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpGet("unverified/count")]
         public async Task<IActionResult> GetVerifiedListingCount()
         {
             try
             {
                 var count = await _listingService.GetUnverifiedListingCountAsync();
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("denied/count")]
+        public async Task<IActionResult> GetDeniedListingCount()
+        {
+            try
+            {
+                var count = await _listingService.GetDeniedListingCountAsync();
                 return Ok(count);
             }
             catch (Exception ex)
@@ -162,12 +208,12 @@ namespace HF6SvendeAPI.Controllers
 
         [HttpPut("{id}/{verified}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> SetListingVerified(int id, bool verified)
+        public async Task<IActionResult> SetListingVerified(int id, bool verified, DateTime? denyDate)
         {
             try
             {
                 // Call the service method to update the listing's verification status
-                bool isUpdated = await _listingService.SetListingVerifiedAsync(id, verified);
+                bool isUpdated = await _listingService.SetListingVerifiedAsync(id, verified, denyDate);
 
                 if (isUpdated)
                 {

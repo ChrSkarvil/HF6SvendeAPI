@@ -4,6 +4,7 @@ using HF6SvendeAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HF6Svende.Infrastructure.Migrations
 {
     [DbContext(typeof(DemmacsWatchesDbContext))]
-    partial class DemmacsWatchesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240826111954_DenyDateForListings")]
+    partial class DenyDateForListings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

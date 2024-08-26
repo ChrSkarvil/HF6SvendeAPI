@@ -17,12 +17,16 @@ namespace HF6Svende.Core.Interfaces
 
         Task<List<Listing>> GetAllVerifiedListingsAsync();
         Task<List<Listing>> GetAllUnverifiedListingsAsync();
+        Task<List<Listing>> GetAllDeniedListingsAsync();
+
+        Task<List<Listing>> GetListingsByCustomerIdAsync(int customerId);
 
         Task<int> GetUnverifiedListingCountAsync();
+        Task<int> GetDeniedListingCountAsync();
         Task<int> GetListingCountAsync();
 
         Task SetSoldDateAsync(int listingId, DateTime soldDate);
-        Task SetListingVerifiedAsync(int listingId, bool verified);
+        Task SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate);
 
 
 

@@ -71,6 +71,23 @@ namespace HF6Svende.Application.Services
 
         }
 
+        public async Task<List<ListingDTO>> GetListingsByCustomerIdAsync(int customerId)
+        {
+            try
+            {
+                // Get customer listings
+                var listings = await _listingRepository.GetListingsByCustomerIdAsync(customerId);
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listings.", ex);
+            }
+
+        }
+
         public async Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto)
         {
             try
@@ -255,11 +272,28 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<bool> SetListingVerifiedAsync(int listingId, bool verified)
+        public async Task<List<ListingDTO>> GetAllDeniedListingsAsync()
         {
             try
             {
-                await _listingRepository.SetListingVerifiedAsync(listingId, verified);
+                // Get all unverified listings
+                var listings = await _listingRepository.GetAllDeniedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<bool> SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate)
+        {
+            try
+            {
+                await _listingRepository.SetListingVerifiedAsync(listingId, verified, denyDate);
                 return true;
             }
             catch (KeyNotFoundException)
@@ -271,6 +305,18 @@ namespace HF6Svende.Application.Services
                 throw new Exception("An error occurred while updating the listing.", ex);
             }
             
+        }
+
+        public async Task<int> GetDeniedListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetDeniedListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the unverified listing count.", ex);
+            }
         }
 
         public async Task<int> GetUnverifiedListingCountAsync()

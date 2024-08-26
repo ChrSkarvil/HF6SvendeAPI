@@ -64,6 +64,29 @@ namespace HF6Svende.Infrastructure.Repository
             }
         }
 
+        public async Task<List<Listing>> GetListingsByCustomerIdAsync(int customerId)
+        {
+            try
+            {
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .Where(l => l.CustomerId == customerId)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
         public async Task<Listing> CreateListingAsync(Listing listing)
         {
             try
@@ -145,7 +168,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
-                    .Where(l => l.IsListingVerified == true)
+                    .Where(l => l.IsListingVerified == true && l.IsActive == true)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -177,7 +200,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
         }
 
-        public async Task SetListingVerifiedAsync(int listingId, bool verified)
+        public async Task SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate)
         {
             var listing = await _context.Listings.FindAsync(listingId);
             if (listing == null)
@@ -186,6 +209,7 @@ namespace HF6Svende.Infrastructure.Repository
             }
 
             listing.IsListingVerified = verified;
+            listing.DenyDate = denyDate;
             _context.Listings.Update(listing);
             await _context.SaveChangesAsync();
         }
@@ -195,7 +219,20 @@ namespace HF6Svende.Infrastructure.Repository
             try
             {
                 return await _context.Listings
-                    .CountAsync(l => l.IsListingVerified == false);
+                    .CountAsync(l => l.IsListingVerified == false && l.DenyDate == null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while counting verified listings.", ex);
+            }
+        }
+
+        public async Task<int> GetDeniedListingCountAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .CountAsync(l => l.DenyDate != null);
             }
             catch (Exception ex)
             {
@@ -213,6 +250,29 @@ namespace HF6Svende.Infrastructure.Repository
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while counting listings.", ex);
+            }
+        }
+
+        public async Task<List<Listing>> GetAllDeniedListingsAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Category)
+                            .ThenInclude(c => c.Gender)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.Images)
+                    .Include(l => l.Product)
+                        .ThenInclude(p => p.ProductColors)
+                            .ThenInclude(pc => pc.Color)
+                    .Include(l => l.Customer)
+                    .Where(l => l.DenyDate != null)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the denied listings.", ex);
             }
         }
     }

@@ -19,6 +19,7 @@ namespace HF6Svende.Application.DTO.Listing
         public int CustomerId { get; set; }
         public string? CustomerName { get; set; } = null!;
         public bool IsListingVerified { get; set; }
+        public DateTime? DenyDate { get; set; }
 
         //Product data
         public ProductDTO Product { get; set; } = null!;
