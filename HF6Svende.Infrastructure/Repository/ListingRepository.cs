@@ -191,7 +191,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
-                    .Where(l => l.IsListingVerified == false)
+                    .Where(l => l.IsListingVerified == false && l.DenyDate == null)
                     .ToListAsync();
             }
             catch (Exception ex)
