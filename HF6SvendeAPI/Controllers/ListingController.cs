@@ -206,7 +206,7 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
-        [HttpPut("{id}/{verified}")]
+        [HttpPut("{id}/{verified}/{denyDate?}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SetListingVerified(int id, bool verified, DateTime? denyDate)
         {
