@@ -199,6 +199,18 @@ namespace HF6Svende.Application.Services
             }
         }
 
+        public async Task<int> GetLoginsCountAsync()
+        {
+            try
+            {
+                return await _loginRepository.GetLoginsCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the login count.", ex);
+            }
+        }
+
         public async Task<LoginDTO?> UpdateLoginAsync(int id, LoginUpdateDTO updateLoginDto)
         {
             try

@@ -91,6 +91,19 @@ namespace HF6Svende.Infrastructure.Repository
             }
         }
 
+        public async Task<int> GetLoginsCountAsync()
+        {
+            try
+            {
+                return await _context.Logins
+                    .CountAsync(l => l.CustomerId != null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while counting logins.", ex);
+            }
+        }
+
         public async Task<Login> UpdateLoginAsync(Login login)
         {
             try

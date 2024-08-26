@@ -20,6 +20,9 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<List<ListingDTO>> GetAllVerifiedListingsAsync();
         Task<List<ListingDTO>> GetAllUnverifiedListingsAsync();
 
+        Task<int> GetUnverifiedListingCountAsync();
+        Task<int> GetListingCountAsync();
+
         Task<bool> SetListingVerifiedAsync(int listingId, bool verified);
 
     }

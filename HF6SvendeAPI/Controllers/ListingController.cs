@@ -77,6 +77,34 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpGet("unverified/count")]
+        public async Task<IActionResult> GetVerifiedListingCount()
+        {
+            try
+            {
+                var count = await _listingService.GetUnverifiedListingCountAsync();
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("count")]
+        public async Task<IActionResult> GetListingCount()
+        {
+            try
+            {
+                var count = await _listingService.GetListingCountAsync();
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<ListingDTO>> CreateListing([FromForm] ListingCreateDTO createListingDto)
         {
@@ -179,3 +207,4 @@ namespace HF6SvendeAPI.Controllers
 
     }
 }
+

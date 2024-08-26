@@ -189,5 +189,31 @@ namespace HF6Svende.Infrastructure.Repository
             _context.Listings.Update(listing);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<int> GetUnverifiedListingCountAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .CountAsync(l => l.IsListingVerified == false);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while counting verified listings.", ex);
+            }
+        }
+
+        public async Task<int> GetListingCountAsync()
+        {
+            try
+            {
+                return await _context.Listings
+                    .CountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while counting listings.", ex);
+            }
+        }
     }
 }

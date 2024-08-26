@@ -24,7 +24,8 @@ namespace HF6Svende.Application.Services
         private readonly IMapper _mapper;
 
 
-        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IImageRepository imageRepository, IMapper mapper)
+        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, 
+            IImageRepository imageRepository, IMapper mapper)
         {
             _listingRepository = listingRepository;
             _productRepository = productRepository;
@@ -272,6 +273,30 @@ namespace HF6Svende.Application.Services
             
         }
 
+        public async Task<int> GetUnverifiedListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetUnverifiedListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the unverified listing count.", ex);
+            }
+        }
+
+        public async Task<int> GetListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing count.", ex);
+            }
+        }
+
         private byte[] ConvertToBytes(IFormFile file)
         {
             using (var memoryStream = new MemoryStream())
@@ -280,6 +305,5 @@ namespace HF6Svende.Application.Services
                 return memoryStream.ToArray();
             }
         }
-
     }
 }

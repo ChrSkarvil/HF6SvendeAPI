@@ -15,5 +15,8 @@ namespace HF6Svende.Core.Repository_Interfaces
         Task<Login> CreateLoginAsync(Login login);
         Task<Login> UpdateLoginAsync(Login login);
         Task<bool> DeleteLoginAsync(int id);
+
+        Task<int> GetLoginsCountAsync();
+
     }
 }

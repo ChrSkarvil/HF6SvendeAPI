@@ -63,6 +63,20 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpGet("count")]
+        public async Task<IActionResult> GetLoginsCount()
+        {
+            try
+            {
+                var count = await _loginService.GetLoginsCountAsync();
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<LoginDTO>> CreateLogin([FromBody] LoginCreateDTO createLoginDto)
         {
