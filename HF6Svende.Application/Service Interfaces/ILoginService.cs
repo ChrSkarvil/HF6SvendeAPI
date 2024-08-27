@@ -18,6 +18,7 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<LoginDTO> CreateLoginAsync(LoginCreateDTO createLoginDto);
         Task<LoginDTO?> UpdateLoginAsync(int id, LoginUpdateDTO updateLoginDto);
         Task<AuthResponse> AuthenticateUserAsync(LoginAuthDTO loginDto);
+        Task<AuthResponse> RefreshTokenAsync(string token, string refreshToken);
         Task<bool> DeleteLoginAsync(int id);
         Task<int> GetLoginsCountAsync();
     }

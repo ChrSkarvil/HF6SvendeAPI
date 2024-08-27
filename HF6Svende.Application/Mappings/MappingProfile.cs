@@ -16,6 +16,7 @@ using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Order;
 using HF6Svende.Application.DTO.Payment;
 using HF6Svende.Application.DTO.Product;
+using HF6Svende.Core.Entities;
 using HF6SvendeAPI.Data.Entities;
 using Microsoft.AspNetCore.Http;
 
@@ -221,10 +222,6 @@ namespace HF6Svende.Application.Mappings
             CreateMap<Delivery, DeliveryDTO>()
                 .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.PostalCode.PostCode))
                 .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Country.Name));
-
-
-
-
 
         }
 

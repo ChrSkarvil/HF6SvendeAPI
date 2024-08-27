@@ -11,6 +11,7 @@ namespace HF6Svende.Application.Service_Interfaces
     public interface IJwtTokenService
     {
         string GenerateJwtToken(string email, string? role, string userName, string userId, int? customerId);
+        string GenerateRefreshToken();
         ClaimsPrincipal? ValidateToken(string token);
 
     }

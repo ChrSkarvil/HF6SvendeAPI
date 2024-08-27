@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using HF6Svende.Core.Entities;
 
 namespace HF6SvendeAPI.Data.Entities
 {
@@ -9,8 +10,13 @@ namespace HF6SvendeAPI.Data.Entities
         Customer = 1,
         Employee = 2,
     }
+
     public class Login
     {
+        public Login()
+        {
+            RefreshTokens = new HashSet<RefreshToken>();;
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -31,5 +37,7 @@ namespace HF6SvendeAPI.Data.Entities
 
         public virtual Customer? Customer { get; set; }
         public virtual Employee? Employee { get; set; }
+        public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
+
     }
 }
