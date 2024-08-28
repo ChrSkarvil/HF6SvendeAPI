@@ -307,6 +307,24 @@ namespace HF6Svende.Application.Services
             
         }
 
+        public async Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate)
+        {
+            try
+            {
+                await _listingRepository.SetListingDeleteDateAsync(listingId, deleted, deleteDate);
+                return true;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while updating the listing.", ex);
+            }
+
+        }
+
         public async Task<int> GetDeniedListingCountAsync()
         {
             try

@@ -352,6 +352,9 @@ namespace HF6SvendeAPI.Data
 
                 entity.Property(e => e.DenyDate);
 
+                entity.Property(e => e.DeleteDate);
+
+
                 entity.HasOne(d => d.Product)
                     .WithOne(p => p.Listing)
                     .HasForeignKey<Listing>(d => d.ProductId)

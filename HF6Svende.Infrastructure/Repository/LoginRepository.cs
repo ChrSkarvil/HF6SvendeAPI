@@ -117,5 +117,24 @@ namespace HF6Svende.Infrastructure.Repository
                 throw new Exception("An error occurred while updating the login.", ex);
             }
         }
+        public async Task SetLoginInactiveAsync(int loginId, bool isActive)
+        {
+            try
+            {
+                var login = await _context.Logins.FindAsync(loginId);
+                if (login == null)
+                {
+                    throw new KeyNotFoundException("Login not found");
+                }
+
+                login.IsActive = isActive;
+                _context.Logins.Update(login);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while setting the login inactive.", ex);
+            }
+        }
     }
 }

@@ -21,5 +21,8 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<AuthResponse> RefreshTokenAsync(string token, string refreshToken);
         Task<bool> DeleteLoginAsync(int id);
         Task<int> GetLoginsCountAsync();
+
+        Task<bool> SetLoginInactiveAsync(int loginId, bool isActive);
+
     }
 }

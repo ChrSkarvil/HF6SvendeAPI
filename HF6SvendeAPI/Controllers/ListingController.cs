@@ -233,6 +233,33 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [HttpPut("delete/{id}/{deleted}/{deleteDate?}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> SetListingDeleteDate(int id, bool deleted, DateTime? deleteDate)
+        {
+            try
+            {
+                // Call the service method to update the listing's deletedate
+                bool isUpdated = await _listingService.SetListingDeleteDateAsync(id, deleted, deleteDate);
+
+                if (isUpdated)
+                {
+                    // Return 200 OK if the update was successful
+                    return Ok(new { Success = true });
+                }
+                else
+                {
+                    // Return 404 Not Found if the listing was not found
+                    return NotFound(new { Success = false, Message = "Listing not found." });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Return a 500 Internal Server Error with a generic error message
+                return StatusCode(500, new { Success = false, Message = "An error occurred while updating the listing.", Details = ex.Message });
+            }
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteListing(int id)
         {

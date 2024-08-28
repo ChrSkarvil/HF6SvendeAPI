@@ -26,6 +26,7 @@ namespace HF6SvendeAPI.Data.Entities
         [Required]
         public bool IsActive { get; set; }
         public DateTime? DenyDate { get; set; }
+        public DateTime? DeleteDate { get; set; }
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
         [ForeignKey(nameof(Customer))]

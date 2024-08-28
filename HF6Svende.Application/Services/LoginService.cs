@@ -49,7 +49,7 @@ namespace HF6Svende.Application.Services
                 // Get the login details
                 var login = await _loginRepository.GetLoginByEmailAsync(loginDto.Email);
 
-                if (login == null || !BC.Verify(loginDto.Password, login.Password))
+                if (login == null || !BC.Verify(loginDto.Password, login.Password) || login.IsActive == false)
                 {
                     throw new UnauthorizedAccessException("Invalid credentials.");
                 }
@@ -310,6 +310,24 @@ namespace HF6Svende.Application.Services
             {
                 throw new Exception("An error occurred while updating the login.", ex);
             }
+        }
+
+        public async Task<bool> SetLoginInactiveAsync(int loginId, bool isActive)
+        {
+            try
+            {
+                await _loginRepository.SetLoginInactiveAsync(loginId, isActive);
+                return true;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while updating the login.", ex);
+            }
+
         }
     }
 }

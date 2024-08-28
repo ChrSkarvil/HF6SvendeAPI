@@ -18,5 +18,8 @@ namespace HF6Svende.Core.Repository_Interfaces
 
         Task<int> GetLoginsCountAsync();
 
+        Task SetLoginInactiveAsync(int loginId, bool isActive);
+
+
     }
 }

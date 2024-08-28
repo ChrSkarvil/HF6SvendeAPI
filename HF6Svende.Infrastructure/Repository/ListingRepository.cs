@@ -33,6 +33,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
+                    .Where(l => l.DeleteDate == null)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -168,7 +169,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
-                    .Where(l => l.IsListingVerified == true && l.IsActive == true)
+                    .Where(l => l.IsListingVerified == true && l.IsActive == true && l.SoldDate == null && l.DeleteDate == null)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -191,7 +192,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
-                    .Where(l => l.IsListingVerified == false && l.DenyDate == null)
+                    .Where(l => l.IsListingVerified == false && l.DenyDate == null && l.DeleteDate == null)
                     .ToListAsync();
             }
             catch (Exception ex)
@@ -202,16 +203,43 @@ namespace HF6Svende.Infrastructure.Repository
 
         public async Task SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate)
         {
-            var listing = await _context.Listings.FindAsync(listingId);
-            if (listing == null)
+            try
             {
-                throw new KeyNotFoundException("Listing not found");
-            }
+                var listing = await _context.Listings.FindAsync(listingId);
+                if (listing == null)
+                {
+                    throw new KeyNotFoundException("Listing not found");
+                }
 
-            listing.IsListingVerified = verified;
-            listing.DenyDate = denyDate;
-            _context.Listings.Update(listing);
-            await _context.SaveChangesAsync();
+                listing.IsListingVerified = verified;
+                listing.DenyDate = denyDate;
+                _context.Listings.Update(listing);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while verifying the listings.", ex);
+            }
+        }
+
+        public async Task SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate)
+        {
+            try
+            {
+                var listing = await _context.Listings.FindAsync(listingId);
+                if (listing == null)
+                {
+                    throw new KeyNotFoundException("Listing not found");
+                }
+
+                listing.DeleteDate = deleteDate;
+                _context.Listings.Update(listing);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while deleting the listings.", ex);
+            }
         }
 
         public async Task<int> GetUnverifiedListingCountAsync()
@@ -219,7 +247,7 @@ namespace HF6Svende.Infrastructure.Repository
             try
             {
                 return await _context.Listings
-                    .CountAsync(l => l.IsListingVerified == false && l.DenyDate == null);
+                    .CountAsync(l => l.IsListingVerified == false && l.DenyDate == null && l.DeleteDate == null);
             }
             catch (Exception ex)
             {
@@ -232,7 +260,7 @@ namespace HF6Svende.Infrastructure.Repository
             try
             {
                 return await _context.Listings
-                    .CountAsync(l => l.DenyDate != null);
+                    .CountAsync(l => l.DenyDate != null && l.DeleteDate == null);
             }
             catch (Exception ex)
             {
@@ -267,7 +295,7 @@ namespace HF6Svende.Infrastructure.Repository
                         .ThenInclude(p => p.ProductColors)
                             .ThenInclude(pc => pc.Color)
                     .Include(l => l.Customer)
-                    .Where(l => l.DenyDate != null)
+                    .Where(l => l.DenyDate != null && l.DeleteDate == null)
                     .ToListAsync();
             }
             catch (Exception ex)

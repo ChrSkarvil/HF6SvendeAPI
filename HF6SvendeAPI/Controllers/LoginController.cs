@@ -1,6 +1,7 @@
 ﻿using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.Service_Interfaces;
 using HF6Svende.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HF6SvendeAPI.Controllers
@@ -130,6 +131,33 @@ namespace HF6SvendeAPI.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/{isActive}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> SetLoginInactive(int id, bool isActive)
+        {
+            try
+            {
+                // Call the service method to update the login's verification status
+                bool isUpdated = await _loginService.SetLoginInactiveAsync(id, isActive);
+
+                if (isUpdated)
+                {
+                    // Return 200 OK if the update was successful
+                    return Ok(new { Success = true });
+                }
+                else
+                {
+                    // Return 404 Not Found if the login was not found
+                    return NotFound(new { Success = false, Message = "Login not found." });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Return a 500 Internal Server Error with a generic error message
+                return StatusCode(500, new { Success = false, Message = "An error occurred while updating the login.", Details = ex.Message });
             }
         }
 

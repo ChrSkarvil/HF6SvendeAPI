@@ -27,6 +27,8 @@ namespace HF6Svende.Core.Interfaces
 
         Task SetSoldDateAsync(int listingId, DateTime soldDate);
         Task SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate);
+        Task SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate);
+
 
 
 

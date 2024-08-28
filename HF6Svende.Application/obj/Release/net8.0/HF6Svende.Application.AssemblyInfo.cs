@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HF6Svende.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44d3d08403ef8bbae49ff620073fdcb6968d4692")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e4eb5a882e58e4a32ec9aa01162b5f458a13c36")]
 [assembly: System.Reflection.AssemblyProductAttribute("HF6Svende.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HF6Svende.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
