@@ -1,6 +1,7 @@
 ﻿using HF6Svende.Application.DTO.Customer;
 using HF6Svende.Application.Service_Interfaces;
 using HF6Svende.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HF6SvendeAPI.Controllers
@@ -86,6 +87,7 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(int id)
         {

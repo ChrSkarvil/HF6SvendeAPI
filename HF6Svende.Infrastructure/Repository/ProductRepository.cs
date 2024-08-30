@@ -59,7 +59,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).ToListAsync();
+                return await _context.Products.Include(l => l.Category).ThenInclude(c => c.Gender).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -71,7 +71,7 @@ namespace HF6Svende.Infrastructure.Repository
         {
             try
             {
-                return await _context.Products.Include(l => l.Category).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).FirstOrDefaultAsync(l => l.Id == id);
+                return await _context.Products.Include(l => l.Category).ThenInclude(c => c.Gender).Include(l => l.Images).Include(l => l.ProductColors).ThenInclude(pc => pc.Color).FirstOrDefaultAsync(l => l.Id == id);
             }
             catch (Exception ex)
             {

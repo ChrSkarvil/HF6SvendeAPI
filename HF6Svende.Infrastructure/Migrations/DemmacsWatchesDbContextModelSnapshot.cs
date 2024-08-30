@@ -22,6 +22,34 @@ namespace HF6Svende.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("HF6Svende.Core.Entities.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LoginId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("RevokedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LoginId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Cart", b =>
                 {
                     b.Property<int>("Id")
@@ -448,6 +476,12 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DenyDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("ExpireDate")
                         .HasColumnType("datetime2");
 
@@ -753,6 +787,17 @@ namespace HF6Svende.Infrastructure.Migrations
                             Id = 1,
                             Name = "Admin"
                         });
+                });
+
+            modelBuilder.Entity("HF6Svende.Core.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("HF6SvendeAPI.Data.Entities.Login", "Login")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("LoginId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Login");
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Cart", b =>
@@ -1098,6 +1143,11 @@ namespace HF6Svende.Infrastructure.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Login", b =>
+                {
+                    b.Navigation("RefreshTokens");
                 });
 
             modelBuilder.Entity("HF6SvendeAPI.Data.Entities.Order", b =>

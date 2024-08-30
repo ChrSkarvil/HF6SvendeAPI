@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HF6Svende.Application.DTO;
 using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Product;
 using HF6SvendeAPI.Data.Entities;
@@ -16,6 +17,12 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<LoginDTO?> GetLoginByEmailAsync(string mail);
         Task<LoginDTO> CreateLoginAsync(LoginCreateDTO createLoginDto);
         Task<LoginDTO?> UpdateLoginAsync(int id, LoginUpdateDTO updateLoginDto);
+        Task<AuthResponse> AuthenticateUserAsync(LoginAuthDTO loginDto);
+        Task<AuthResponse> RefreshTokenAsync(string token, string refreshToken);
         Task<bool> DeleteLoginAsync(int id);
+        Task<int> GetLoginsCountAsync();
+
+        Task<bool> SetLoginInactiveAsync(int loginId, bool isActive);
+
     }
 }

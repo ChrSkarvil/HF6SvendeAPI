@@ -22,3 +22,15 @@ C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\refint\HF6Svende.Core.dll
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.pdb
 C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\ref\HF6Svende.Core.dll
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.deps.json
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.dll
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\bin\Debug\net8.0\HF6Svende.Core.pdb
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.AssemblyInfoInputs.cache
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.AssemblyInfo.cs
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.csproj.CoreCompileInputs.cache
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.sourcelink.json
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.dll
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\refint\HF6Svende.Core.dll
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\HF6Svende.Core.pdb
+C:\arbejde\HF6SvendeAPI\HF6Svende.Core\obj\Debug\net8.0\ref\HF6Svende.Core.dll

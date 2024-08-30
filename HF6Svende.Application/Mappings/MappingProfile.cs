@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using HF6Svende.Application.DTO;
+using HF6Svende.Application.DTO.Color;
 using HF6Svende.Application.DTO.Country;
 using HF6Svende.Application.DTO.Customer;
 using HF6Svende.Application.DTO.Delivery;
@@ -15,6 +16,7 @@ using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Order;
 using HF6Svende.Application.DTO.Payment;
 using HF6Svende.Application.DTO.Product;
+using HF6Svende.Core.Entities;
 using HF6SvendeAPI.Data.Entities;
 using Microsoft.AspNetCore.Http;
 
@@ -37,6 +39,7 @@ namespace HF6Svende.Application.Mappings
                         Size = src.Product.Size,
                         CategoryId = src.Product.CategoryId,
                         CategoryName = src.Product.Category.Name,
+                        Gender = src.Product.Category.Gender.Name,
                         Images = src.Product.Images.Select(image => new ImageDTO
                         {
                             Id = image.Id,
@@ -78,6 +81,7 @@ namespace HF6Svende.Application.Mappings
                     IsVerified = image.IsVerified
                 }).ToList()))
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Category.Gender.Name))
                 .ForMember(dest => dest.Colors, opt => opt.MapFrom(src => src.ProductColors.Select(pc => new ProductColorDTO
                 {
                     Id = pc.Id,
@@ -115,6 +119,9 @@ namespace HF6Svende.Application.Mappings
 
             // Countries
             CreateMap<Country, CountryDTO>();
+
+            // Colors
+            CreateMap<Color, ColorDTO>();
 
             // Employees
             CreateMap<Employee, EmployeeDTO>()
@@ -160,6 +167,11 @@ namespace HF6Svende.Application.Mappings
                         : src.Employee != null && src.Employee.Role != null
                         ? src.Employee.Role.Name
                         : string.Empty));
+
+            // LoginAuthDTO
+            CreateMap<Login, LoginAuthDTO>()
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password));
 
             // CreateLoginDTO
             CreateMap<LoginCreateDTO, Login>()
@@ -210,10 +222,6 @@ namespace HF6Svende.Application.Mappings
             CreateMap<Delivery, DeliveryDTO>()
                 .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.PostalCode.PostCode))
                 .ForMember(dest => dest.Country, opt => opt.MapFrom(src => src.Country.Name));
-
-
-
-
 
         }
 

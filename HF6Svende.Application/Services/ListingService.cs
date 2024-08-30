@@ -11,6 +11,7 @@ using HF6Svende.Core.Interfaces;
 using HF6Svende.Core.Repository_Interfaces;
 using HF6Svende.Infrastructure.Repository;
 using HF6SvendeAPI.Data.Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace HF6Svende.Application.Services
 {
@@ -19,14 +20,17 @@ namespace HF6Svende.Application.Services
         private readonly IListingRepository _listingRepository;
         private readonly IProductRepository _productRepository;
         private readonly IColorRepository _colorRepository;
+        private readonly IImageRepository _imageRepository;
         private readonly IMapper _mapper;
 
 
-        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, IMapper mapper)
+        public ListingService(IListingRepository listingRepository, IProductRepository productRepository, IColorRepository colorRepository, 
+            IImageRepository imageRepository, IMapper mapper)
         {
             _listingRepository = listingRepository;
             _productRepository = productRepository;
             _colorRepository = colorRepository;
+            _imageRepository = imageRepository;
             _mapper = mapper;
         }
 
@@ -67,6 +71,23 @@ namespace HF6Svende.Application.Services
 
         }
 
+        public async Task<List<ListingDTO>> GetListingsByCustomerIdAsync(int customerId)
+        {
+            try
+            {
+                // Get customer listings
+                var listings = await _listingRepository.GetListingsByCustomerIdAsync(customerId);
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listings.", ex);
+            }
+
+        }
+
         public async Task<ListingDTO> CreateListingAsync(ListingCreateDTO createListingDto)
         {
             try
@@ -101,13 +122,19 @@ namespace HF6Svende.Application.Services
             }
         }
 
-        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto)
+        public async Task<ListingDTO?> UpdateListingAsync(int id, ListingUpdateDTO updateListingDto, int? customerId, string role)
         {
             try
             {
                 // Get existing listing
                 var listing = await _listingRepository.GetListingByIdAsync(id);
                 if (listing == null) return null;
+
+                // Check if the user is an admin or if they own the listing
+                if (role.ToLower() != "admin" && listing.CustomerId != customerId)
+                {
+                    throw new UnauthorizedAccessException("User is not authorized to update the listing.");
+                }
 
                 // Mapping dto to entity
                 _mapper.Map(updateListingDto, listing);
@@ -117,12 +144,44 @@ namespace HF6Svende.Application.Services
                 listing.Product.Description = updateListingDto.Description;
                 listing.Product.Size = updateListingDto.Size;
 
+                // Handle colors
+                var colors = await GetProductColorsAsync(updateListingDto.ColorNames);
+                listing.Product.ProductColors = colors;
+
+                // Handle image updates
+                if (updateListingDto.NewImages.Any())
+                {
+                    var images = updateListingDto.NewImages.Select(file => new Image
+                    {
+                        File = ConvertToBytes(file),
+                        CreateDate = DateTime.UtcNow,
+                        IsVerified = true,
+                        ProductId = listing.Product.Id
+                    }).ToList();
+
+                    foreach (var image in images)
+                    {
+                        await _imageRepository.CreateImageAsync(image);
+                    }
+                }
+
+                if (updateListingDto.ImageIdsToRemove.Any())
+                {
+                    foreach (var imageId in updateListingDto.ImageIdsToRemove)
+                    {
+                        await _imageRepository.DeleteImageAsync(imageId);
+                    }
+                }
 
                 // Save the changes in the repository
                 var updatedListing = await _listingRepository.UpdateListingAsync(listing);
 
                 // Mapping back to dto
                 return _mapper.Map<ListingDTO>(updatedListing);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -179,5 +238,136 @@ namespace HF6Svende.Application.Services
             return productColors;
         }
 
+        public async Task<List<ListingDTO>> GetAllVerifiedListingsAsync()
+        {
+            try
+            {
+                // Get all verified listings
+                var listings = await _listingRepository.GetAllVerifiedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<List<ListingDTO>> GetAllUnverifiedListingsAsync()
+        {
+            try
+            {
+                // Get all unverified listings
+                var listings = await _listingRepository.GetAllUnverifiedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<List<ListingDTO>> GetAllDeniedListingsAsync()
+        {
+            try
+            {
+                // Get all unverified listings
+                var listings = await _listingRepository.GetAllDeniedListingsAsync();
+
+                // Mapping back to dto
+                return _mapper.Map<List<ListingDTO>>(listings);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing.", ex);
+            }
+        }
+
+        public async Task<bool> SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate)
+        {
+            try
+            {
+                await _listingRepository.SetListingVerifiedAsync(listingId, verified, denyDate);
+                return true;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false; 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while updating the listing.", ex);
+            }
+            
+        }
+
+        public async Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate)
+        {
+            try
+            {
+                await _listingRepository.SetListingDeleteDateAsync(listingId, deleted, deleteDate);
+                return true;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while updating the listing.", ex);
+            }
+
+        }
+
+        public async Task<int> GetDeniedListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetDeniedListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the unverified listing count.", ex);
+            }
+        }
+
+        public async Task<int> GetUnverifiedListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetUnverifiedListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the unverified listing count.", ex);
+            }
+        }
+
+        public async Task<int> GetListingCountAsync()
+        {
+            try
+            {
+                return await _listingRepository.GetListingCountAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the listing count.", ex);
+            }
+        }
+
+        private byte[] ConvertToBytes(IFormFile file)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+            }
+        }
     }
 }

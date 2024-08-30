@@ -10,6 +10,7 @@ using HF6Svende.Core.Repository_Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,13 +20,6 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Get connection string
 builder.Services.AddDbContext<DemmacsWatchesDbContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("DemmacsWatches")));
-
-//var clientId = builder.Configuration["AzureAd:ClientId"];
-//var clientSecret = builder.Configuration["AzureAd:ClientSecret"];
-//var tenantId = builder.Configuration["AzureAd:TenantId"];
-
-//builder.Services.AddScoped<ITokenService>(provider =>
-//    new TokenService(clientId, clientSecret, tenantId));
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -59,31 +53,77 @@ builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IProductColorRepository, ProductColorRepository>();
 // Colors
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
+builder.Services.AddScoped<IColorService, ColorService>();
 // Orders
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<IOrderItemService, OrderItemService>();
+//JWT
+builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
+//RefreshTokens
+builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.Authority = $"{builder.Configuration["AzureAd:Instance"]}{builder.Configuration["AzureAd:TenantId"]}";
-//        options.Audience = builder.Configuration["AzureAd:Audience"];
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateLifetime = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidIssuer = builder.Configuration["AzureAd:Instance"] + builder.Configuration["AzureAd:TenantId"],
-//            ValidAudience = builder.Configuration["AzureAd:Audience"]
-//        };
-//    });
+
+
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(jwtOptions =>
+    {
+        var key = builder.Configuration.GetValue<string>("JwtConfig:SecretKey");
+        var keyBytes = Encoding.ASCII.GetBytes(key);
+        jwtOptions.SaveToken = true;
+        jwtOptions.TokenValidationParameters = new TokenValidationParameters
+        {
+            IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
+            ValidateLifetime = true,
+            ValidateAudience = false,
+            ValidateIssuer = false
+            //ClockSkew = TimeSpan.Zero //The key expires immediately at expiration time, instead of waiting the 5 minutes for the token to validate
+        };
+    });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+    options.AddPolicy("CustomerOrAdmin", policy =>
+        policy.RequireRole("Admin", "Customer"));
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(opts =>
+{
+    opts.SwaggerDoc("v1", new OpenApiInfo { Title = "HF6SvendeAPI", Version = "v1" });
+    opts.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Enter JWT Token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    opts.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+});
 
 
 builder.Services.AddCors(options =>
@@ -105,12 +145,12 @@ app.UseCors("AllowAll");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    //app.UseSwaggerUI();
-    app.UseSwaggerUI(s =>
-    {
-        s.SwaggerEndpoint("/swagger/v1/swagger.json", "Dispatch API V1");
-        s.RoutePrefix = string.Empty;
-    });
+    app.UseSwaggerUI();
+    //app.UseSwaggerUI(s =>
+    //{
+    //    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Dispatch API V1");
+    //    s.RoutePrefix = string.Empty;
+    //});
 }
 
 app.UseHttpsRedirection();

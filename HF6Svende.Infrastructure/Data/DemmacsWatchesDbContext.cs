@@ -1,4 +1,5 @@
-﻿using HF6SvendeAPI.Data.Entities;
+﻿using HF6Svende.Core.Entities;
+using HF6SvendeAPI.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -36,6 +37,7 @@ namespace HF6SvendeAPI.Data
         public virtual DbSet<PostalCode> PostalCodes { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<ProductColor> ProductColors { get; set; } = null!;
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
 
         //Connection to db
@@ -348,6 +350,11 @@ namespace HF6SvendeAPI.Data
                 entity.Property(e => e.IsActive)
                     .HasDefaultValue(1);
 
+                entity.Property(e => e.DenyDate);
+
+                entity.Property(e => e.DeleteDate);
+
+
                 entity.HasOne(d => d.Product)
                     .WithOne(p => p.Listing)
                     .HasForeignKey<Listing>(d => d.ProductId)
@@ -382,6 +389,11 @@ namespace HF6SvendeAPI.Data
                     .WithOne(p => p.Login)
                     .HasForeignKey<Login>(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasMany(e => e.RefreshTokens)
+                   .WithOne(p => p.Login)
+                   .HasForeignKey(p => p.LoginId)
+                   .OnDelete(DeleteBehavior.Cascade);
 
                 entity.Property(e => e.IsActive)
                     .HasDefaultValue(1);
@@ -505,6 +517,20 @@ namespace HF6SvendeAPI.Data
                     .WithMany(p => p.ProductColors)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            //REFRESHTOKEN
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Token)
+                    .IsRequired();
+
+                entity.Property(e => e.ExpiresAt)
+                    .IsRequired();
+
+                entity.Property(e => e.RevokedAt);
             });
 
             //ROLE
