@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -307,16 +308,26 @@ namespace HF6Svende.Application.Services
             
         }
 
-        public async Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate)
+        public async Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate, int? customerId, string role)
         {
             try
             {
+                // Get existing listing
+                var listing = await _listingRepository.GetListingByIdAsync(listingId);
+                if (listing == null) return false;
+
+                // Check if the user is an admin or if they own the listing
+                if (role.ToLower() != "admin" && listing.CustomerId != customerId)
+                {
+                    throw new UnauthorizedAccessException("User is not authorized to update the listing.");
+                }
+
                 await _listingRepository.SetListingDeleteDateAsync(listingId, deleted, deleteDate);
                 return true;
             }
-            catch (KeyNotFoundException)
+            catch (UnauthorizedAccessException)
             {
-                return false;
+                throw;
             }
             catch (Exception ex)
             {
@@ -358,6 +369,41 @@ namespace HF6Svende.Application.Services
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while getting the listing count.", ex);
+            }
+        }
+
+        public async Task<bool> ToggleListingActiveStatusAsync(int listingId, int? customerId, string role)
+        {
+            try
+            {
+                // Get the listing
+                var listing = await _listingRepository.GetListingByIdAsync(listingId);
+                if (listing == null)
+                {
+                    return false;
+                }
+
+                // Check if the user is an admin or if they own the listing
+                if (role.ToLower() != "admin" && listing.CustomerId != customerId)
+                {
+                    throw new UnauthorizedAccessException("User is not authorized to update the listing.");
+                }
+
+                // Toggle the IsActive status
+                listing.IsActive = !listing.IsActive;
+
+                // Update the listing
+                await _listingRepository.UpdateListingAsync(listing);
+
+                return true;
+            }
+            catch (UnauthorizedAccessException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while toggling the listing status.", ex);
             }
         }
 

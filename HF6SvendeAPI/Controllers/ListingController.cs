@@ -171,6 +171,7 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "CustomerOrAdmin")]
         public async Task<IActionResult> UpdateListing(int id, [FromForm] ListingUpdateDTO updateListingDto)
         {
             try
@@ -234,13 +235,27 @@ namespace HF6SvendeAPI.Controllers
         }
 
         [HttpPut("delete/{id}/{deleted}/{deleteDate?}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Policy = "CustomerOrAdmin")]
         public async Task<IActionResult> SetListingDeleteDate(int id, bool deleted, DateTime? deleteDate)
         {
             try
             {
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                var roleClaim = User.FindFirst(ClaimTypes.Role);
+                string role = roleClaim?.Value ?? string.Empty;
+
+                var customerIdClaim = User.FindFirst("CustomerId");
+                int? customerId = customerIdClaim != null ? int.Parse(customerIdClaim.Value) : (int?)null;
+
+
+
                 // Call the service method to update the listing's deletedate
-                bool isUpdated = await _listingService.SetListingDeleteDateAsync(id, deleted, deleteDate);
+                bool isUpdated = await _listingService.SetListingDeleteDateAsync(id, deleted, deleteDate, customerId, role);
 
                 if (isUpdated)
                 {
@@ -253,6 +268,10 @@ namespace HF6SvendeAPI.Controllers
                     return NotFound(new { Success = false, Message = "Listing not found." });
                 }
             }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized(new { Message = "User is not authorized to delete the listing." });
+            }
             catch (Exception ex)
             {
                 // Return a 500 Internal Server Error with a generic error message
@@ -260,6 +279,7 @@ namespace HF6SvendeAPI.Controllers
             }
         }
 
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteListing(int id)
         {
@@ -272,9 +292,58 @@ namespace HF6SvendeAPI.Controllers
                 }
                 return NoContent();
             }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized(new { Message = "User is not authorized to delete the listing." });
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+
+         [HttpPut("toggleActive/{id}")]
+        [Authorize(Policy = "CustomerOrAdmin")]
+        public async Task<IActionResult> ToggleListingActiveStatus(int id)
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (userIdClaim == null)
+                {
+                    return Unauthorized("User ID not found in token.");
+                }
+
+                var roleClaim = User.FindFirst(ClaimTypes.Role);
+                string role = roleClaim?.Value ?? string.Empty;
+
+                var customerIdClaim = User.FindFirst("CustomerId");
+                int? customerId = customerIdClaim != null ? int.Parse(customerIdClaim.Value) : (int?)null;
+
+
+
+                // Call the service method to update the listing's deletedate
+                bool isUpdated = await _listingService.ToggleListingActiveStatusAsync(id, customerId, role);
+
+                if (isUpdated)
+                {
+                    // Return 200 OK if the update was successful
+                    return Ok(new { Success = true });
+                }
+                else
+                {
+                    // Return 404 Not Found if the listing was not found
+                    return NotFound(new { Success = false, Message = "Listing not found." });
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized(new { Message = "User is not authorized to update the listing." });
+            }
+            catch (Exception ex)
+            {
+                // Return a 500 Internal Server Error with a generic error message
+                return StatusCode(500, new { Success = false, Message = "An error occurred while updating the listing.", Details = ex.Message });
             }
         }
 

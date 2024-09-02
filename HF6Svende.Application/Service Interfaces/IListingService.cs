@@ -27,7 +27,8 @@ namespace HF6Svende.Application.Service_Interfaces
         Task<int> GetListingCountAsync();
 
         Task<bool> SetListingVerifiedAsync(int listingId, bool verified, DateTime? denyDate);
-        Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate);
+        Task<bool> SetListingDeleteDateAsync(int listingId, bool deleted, DateTime? deleteDate, int? customerId, string role);
+        Task<bool> ToggleListingActiveStatusAsync(int listingId, int? customerId, string role);
 
 
     }

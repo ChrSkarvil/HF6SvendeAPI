@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HF6Svende.Application
-build_property.ProjectDir = C:\arbejde\HF6SvendeAPI\HF6Svende.Application\
+build_property.ProjectDir = C:\Users\HFGF\Desktop\HF6\HF6SvendeAPI\HF6Svende.Application\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
