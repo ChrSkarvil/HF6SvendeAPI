@@ -14,6 +14,7 @@ namespace HF6Svende.Application.DTO.Listing
         public DateTime? ExpireDate { get; set; }
         public bool IsActive { get; set; }
         public DateTime? DenyDate { get; set; }
+        public bool IsListingVerified { get; set; }
 
         // Product fields to update
         public string Brand { get; set; } = null!;
