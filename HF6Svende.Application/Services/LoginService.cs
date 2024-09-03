@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using AutoMapper;
+using BCrypt.Net;
 using HF6Svende.Application.DTO;
 using HF6Svende.Application.DTO.Login;
 using HF6Svende.Application.DTO.Product;
@@ -296,6 +298,16 @@ namespace HF6Svende.Application.Services
                 // Get existing login
                 var login = await _loginRepository.GetLoginByIdAsync(id);
                 if (login == null) return null;
+
+                if (!string.IsNullOrEmpty(updateLoginDto.NewPassword))
+                {
+                    if (!BC.Verify(updateLoginDto.CurrentPassword, login.Password))
+                    {
+                        throw new UnauthorizedAccessException("Current password is incorrect.");
+                    }
+
+                    login.Password = BC.HashPassword(updateLoginDto.NewPassword);
+                }
 
                 // Mapping dto to entity
                 _mapper.Map(updateLoginDto, login);

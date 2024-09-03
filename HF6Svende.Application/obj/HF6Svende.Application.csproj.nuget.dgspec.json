@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj": {}
+    "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj": {
+    "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
+        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
         "projectName": "HF6Svende.Application",
-        "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
+        "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Application\\HF6Svende.Application.csproj",
         "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Application\\obj\\",
+        "outputPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
-                "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
+              "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
+                "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
               },
-              "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj"
+              "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
+    "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj",
+        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj",
         "projectName": "HF6Svende.Core",
-        "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj",
+        "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj",
         "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\obj\\",
+        "outputPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -159,14 +159,14 @@
         }
       }
     },
-    "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
+    "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
         "projectName": "HF6Svende.Infrastructure",
-        "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\HF6Svende.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HFGF\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -188,8 +188,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
-                "projectPath": "C:\\Users\\HFGF\\Desktop\\HF6\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
+              "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj": {
+                "projectPath": "C:\\Users\\HFGF\\Desktop\\test\\HF6SvendeAPI\\HF6Svende.Core\\HF6Svende.Core.csproj"
               }
             }
           }

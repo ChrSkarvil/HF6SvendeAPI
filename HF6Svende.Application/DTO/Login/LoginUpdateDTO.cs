@@ -10,7 +10,8 @@ namespace HF6Svende.Application.DTO.Login
     public class LoginUpdateDTO
     {
         public string Email { get; set; } = null!;
-        public string Password { get; set; } = null!;
+        public string CurrentPassword { get; set; } = null!;
+        public string NewPassword { get; set; } = null!;
         public bool IsActive { get; set; }
     }
 }
